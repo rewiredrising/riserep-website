@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Privacy Policy — RiseRep</title>
+<meta name="description" content="RiseRep privacy policy: what we collect, how we use it, and your choices." />
+<link rel="icon" type="image/png" href="assets/riserep-logo.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --cream: #f5f0e8;
+    --cream-soft: #fbf8f1;
+    --ink: #1c1c1e;
+    --muted: #6f6a62;
+    --gold: #c4a94d;
+    --border: rgba(28, 28, 30, 0.08);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { background: var(--cream); color: var(--ink); font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 64px 28px 96px; }
+  header.brand { display: flex; align-items: center; gap: 12px; margin-bottom: 48px; }
+  header.brand img { width: 36px; height: 36px; border-radius: 8px; }
+  header.brand span { font-weight: 700; font-size: 18px; letter-spacing: -0.01em; }
+  h1 { font-size: 40px; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 12px; line-height: 1.1; }
+  .updated { color: var(--muted); font-size: 14px; margin-bottom: 40px; }
+  h2 { font-size: 22px; font-weight: 700; letter-spacing: -0.01em; margin-top: 36px; margin-bottom: 12px; }
+  h3 { font-size: 16px; font-weight: 700; margin-top: 20px; margin-bottom: 8px; }
+  p, li { font-size: 16px; line-height: 1.65; color: #2a2a2e; margin-bottom: 12px; }
+  ul, ol { padding-left: 22px; margin-bottom: 12px; }
+  strong { font-weight: 700; }
+  a { color: var(--ink); text-decoration: underline; text-decoration-color: var(--gold); text-underline-offset: 3px; }
+  hr { border: 0; border-top: 1px solid var(--border); margin: 40px 0; }
+  .callout { background: var(--cream-soft); border: 1px solid var(--border); border-radius: 16px; padding: 18px 20px; margin: 16px 0; }
+  footer { color: var(--muted); font-size: 13px; margin-top: 56px; border-top: 1px solid var(--border); padding-top: 24px; }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="brand">
+      <img src="assets/riserep-logo.png" alt="RiseRep logo" />
+      <span>RiseRep</span>
+    </header>
+
+    <h1>Privacy Policy</h1>
+    <p class="updated">Last updated: May 4, 2026</p>
+
+    <p>
+      This Privacy Policy describes how the RiseRep mobile application ("RiseRep," "we," "us," or "our")
+      handles information when you use the app. RiseRep is a proof-of-wake alarm that uses on-device
+      camera processing to verify exercise reps before dismissing your alarm.
+    </p>
+
+    <div class="callout">
+      <strong>Short version:</strong> RiseRep is built to keep your data on your device. Camera frames used to
+      count reps are processed locally and never recorded, uploaded, or transmitted. We don't sell your data,
+      we don't run ads, and we don't use third-party analytics or tracking SDKs.
+    </div>
+
+    <h2>1. Information We Handle</h2>
+
+    <h3>Information processed entirely on your device</h3>
+    <ul>
+      <li><strong>Camera input.</strong> While you are completing reps, the camera feed is analyzed in real time using Apple's Vision body-pose framework. Frames are not stored, recorded, or sent to any server.</li>
+      <li><strong>Onboarding answers and profile.</strong> Goals, schedule, fitness level, and similar responses you provide during setup are stored locally on your device using Apple's SwiftData.</li>
+      <li><strong>Alarms, workouts, and progression history.</strong> Your scheduled alarms, exercise selections, completed reps, streaks, and stats are stored locally.</li>
+      <li><strong>Settings.</strong> Sound choices, notification preferences, partner alert preferences, and Screen Time configuration are stored locally.</li>
+    </ul>
+
+    <h3>Information handled by Apple on your behalf</h3>
+    <ul>
+      <li><strong>In-app purchases.</strong> Monthly and Lifetime Pro subscriptions are processed by Apple via StoreKit. We never see your payment details. Apple provides us a receipt that confirms your subscription status.</li>
+      <li><strong>Accountability Partner pairing.</strong> If you choose to pair with a partner, pairing and partner status are synced through Apple's iCloud / CloudKit using your Apple ID. We do not operate our own servers for this. Only your iCloud-derived partner identifier and partner status (e.g., paired, completed) are exchanged — never camera footage.</li>
+      <li><strong>Notifications.</strong> Alarm, workout reminder, weekly recap, and partner alerts are scheduled as local notifications on your device.</li>
+    </ul>
+
+    <h3>Information we do <em>not</em> collect</h3>
+    <ul>
+      <li>We do not record, store, upload, or transmit any video, photo, or audio from your camera or microphone.</li>
+      <li>We do not collect your precise location.</li>
+      <li>We do not use third-party advertising, analytics, or tracking SDKs.</li>
+      <li>We do not require an account, email, or password to use the app.</li>
+      <li>We do not sell or rent your personal information to anyone.</li>
+    </ul>
+
+    <h2>2. Permissions We Request</h2>
+    <ul>
+      <li><strong>Camera</strong> — required to count reps. Used only while a workout is active. No frames are saved.</li>
+      <li><strong>Notifications</strong> — required for alarms to fire and for reminders / partner alerts.</li>
+      <li><strong>Screen Time / Family Controls</strong> (optional) — used locally to support lockdown features. Activity data stays on-device under Apple's framework.</li>
+    </ul>
+
+    <h2>3. How We Use Information</h2>
+    <p>Information stored on your device is used to:</p>
+    <ul>
+      <li>Schedule and trigger alarms.</li>
+      <li>Verify reps and dismiss alarms.</li>
+      <li>Track streaks, stats, and progression.</li>
+      <li>Personalize the experience based on your onboarding answers.</li>
+      <li>Sync partner status (if you opt in) through iCloud.</li>
+    </ul>
+
+    <h2>4. Data Retention and Deletion</h2>
+    <p>
+      Because nearly all RiseRep data is stored locally, you can delete it at any time by deleting the app
+      or by resetting it from the in-app Settings. Subscription receipts are managed by Apple under your
+      Apple ID. Partner pairing data stored in iCloud can be removed by unlinking your partner in-app or
+      by deleting the app on all your devices.
+    </p>
+
+    <h2>5. Children's Privacy</h2>
+    <p>
+      RiseRep is not directed to children under 13, and we do not knowingly collect information from
+      children under 13. If you believe a child has provided information to us, please contact us so we
+      can address it.
+    </p>
+
+    <h2>6. Security</h2>
+    <p>
+      Your data lives on your device, protected by your device's standard security (passcode, Face ID,
+      Touch ID, and iOS sandboxing). iCloud-synced partner data is protected by Apple's iCloud security.
+      No system is perfectly secure, but we minimize risk by minimizing what we collect.
+    </p>
+
+    <h2>7. Your Rights and Choices</h2>
+    <ul>
+      <li><strong>Access / deletion:</strong> all in-app data can be viewed in the app and removed by uninstalling or resetting the app.</li>
+      <li><strong>Permissions:</strong> camera, notifications, and Screen Time access can be revoked at any time in iOS Settings.</li>
+      <li><strong>Subscriptions:</strong> manage or cancel in your Apple ID subscription settings.</li>
+      <li>
+        Depending on where you live, you may have additional rights under laws such as the GDPR or
+        CCPA/CPRA. See <a href="privacy-choices.html">User Privacy Choices</a> for details.
+      </li>
+    </ul>
+
+    <h2>8. International Users</h2>
+    <p>
+      RiseRep is operated from the United States. If you use the app from outside the U.S., understand
+      that any iCloud-synced data is handled by Apple under Apple's terms and may be processed in
+      other countries.
+    </p>
+
+    <h2>9. Changes to This Policy</h2>
+    <p>
+      We may update this policy from time to time. Material changes will be reflected by updating the
+      "Last updated" date at the top of this page and, where appropriate, in-app.
+    </p>
+
+    <h2>10. Contact</h2>
+    <p>
+      Questions about this policy or your data? Email
+      <a href="mailto:privacy@riserep.app">privacy@riserep.app</a>.
+    </p>
+
+    <footer>
+      © RiseRep. All rights reserved.
+    </footer>
+  </div>
+</body>
+</html>
