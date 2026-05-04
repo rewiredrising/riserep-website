@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Support — RiseReps</title>
+<meta name="description" content="Get help with RiseReps — the proof-of-wake alarm. Troubleshooting, FAQ, and contact." />
+<link rel="icon" type="image/png" href="assets/riserep-logo.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --cream: #f5f0e8;
+    --cream-soft: #fbf8f1;
+    --ink: #1c1c1e;
+    --muted: #6f6a62;
+    --gold: #c4a94d;
+    --border: rgba(28, 28, 30, 0.08);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { background: var(--cream); color: var(--ink); font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 64px 28px 96px; }
+  header.brand { display: flex; align-items: center; gap: 12px; margin-bottom: 48px; }
+  header.brand img { width: 36px; height: 36px; border-radius: 8px; }
+  header.brand span { font-weight: 700; font-size: 18px; letter-spacing: -0.01em; }
+  h1 { font-size: 40px; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 12px; line-height: 1.1; }
+  .updated { color: var(--muted); font-size: 14px; margin-bottom: 40px; }
+  h2 { font-size: 22px; font-weight: 700; letter-spacing: -0.01em; margin-top: 40px; margin-bottom: 14px; }
+  h3 { font-size: 16px; font-weight: 700; margin-top: 22px; margin-bottom: 8px; }
+  p, li { font-size: 16px; line-height: 1.65; color: #2a2a2e; margin-bottom: 12px; }
+  ul, ol { padding-left: 22px; margin-bottom: 12px; }
+  strong { font-weight: 700; }
+  a { color: var(--ink); text-decoration: underline; text-decoration-color: var(--gold); text-underline-offset: 3px; }
+  hr { border: 0; border-top: 1px solid var(--border); margin: 40px 0; }
+  .callout { background: var(--cream-soft); border: 1px solid var(--border); border-radius: 16px; padding: 18px 20px; margin: 16px 0; }
+  .contact-card { background: var(--cream-soft); border: 1px solid var(--border); border-radius: 20px; padding: 24px 26px; margin: 24px 0 8px; display: flex; flex-direction: column; gap: 6px; }
+  .contact-card .label { color: var(--muted); font-size: 13px; text-transform: uppercase; letter-spacing: 0.08em; font-weight: 600; }
+  .contact-card .email { font-size: 22px; font-weight: 700; letter-spacing: -0.01em; }
+  details { background: #fff; border: 1px solid var(--border); border-radius: 14px; padding: 14px 18px; margin-bottom: 10px; }
+  details[open] { background: var(--cream-soft); }
+  summary { cursor: pointer; font-weight: 600; font-size: 16px; list-style: none; outline: none; }
+  summary::-webkit-details-marker { display: none; }
+  summary::after { content: "+"; float: right; color: var(--muted); font-weight: 400; font-size: 18px; line-height: 1; }
+  details[open] summary::after { content: "−"; }
+  details > p, details > ul, details > ol { margin-top: 10px; }
+  footer { color: var(--muted); font-size: 13px; margin-top: 56px; border-top: 1px solid var(--border); padding-top: 24px; }
+  footer a { color: var(--muted); }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="brand">
+      <img src="assets/riserep-logo.png" alt="RiseReps logo" />
+      <span>RiseReps</span>
+    </header>
+
+    <h1>Support</h1>
+    <p class="updated">We respond within 1–2 business days.</p>
+
+    <div class="contact-card">
+      <span class="label">Contact</span>
+      <a class="email" href="mailto:support@riserep.app">support@riserep.app</a>
+      <p style="margin: 6px 0 0; color: var(--muted); font-size: 14px;">
+        Include your iOS version, iPhone model, and a short description of what happened.
+      </p>
+    </div>
+
+    <h2>Quick Fixes</h2>
+
+    <details>
+      <summary>The alarm didn't go off.</summary>
+      <ol>
+        <li>Open <strong>Settings &gt; Notifications &gt; RiseReps</strong> and confirm <em>Allow Notifications</em>, <em>Time Sensitive Notifications</em>, and <em>Critical Alerts</em> are on.</li>
+        <li>Make sure your phone is not in <em>Do Not Disturb</em> or a Focus mode that silences RiseReps.</li>
+        <li>Check that your ringer/silent switch isn't muting the device. RiseReps respects iOS's media volume.</li>
+        <li>Confirm the alarm was scheduled for the right day and time — open the alarm in the app to verify.</li>
+        <li>If you force-quit the app from the app switcher, iOS may not deliver scheduled notifications. Avoid swiping RiseReps closed.</li>
+      </ol>
+    </details>
+
+    <details>
+      <summary>The camera isn't counting my reps.</summary>
+      <ul>
+        <li><strong>Lighting.</strong> Vision body-pose works best in even, front-facing light. Avoid backlit windows behind you.</li>
+        <li><strong>Distance.</strong> Stand 5–6 feet from the camera so your full body is in frame.</li>
+        <li><strong>Form.</strong> Each exercise has a recognized motion arc. Slow down — full range of motion counts more reliably than fast partial reps.</li>
+        <li><strong>Permission.</strong> Open <strong>Settings &gt; Privacy &amp; Security &gt; Camera</strong> and make sure RiseReps is enabled.</li>
+        <li>If you genuinely can't use the camera (e.g., low-light hotel room), the app supports a long-press dismissal from the camera-permission-denied state.</li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>The app crashed or got stuck.</summary>
+      <ol>
+        <li>Force-quit RiseReps and reopen it. Your alarms, streak, and stats are stored locally and will not be lost.</li>
+        <li>Restart your iPhone.</li>
+        <li>Check the App Store for a pending RiseReps update.</li>
+        <li>If it keeps happening, email <a href="mailto:support@riserep.app">support@riserep.app</a> with your iOS version, iPhone model, and what you were doing right before the crash.</li>
+      </ol>
+    </details>
+
+    <details>
+      <summary>I bought Pro but the features aren't unlocked.</summary>
+      <ol>
+        <li>Open RiseReps &gt; Settings &gt; <strong>Restore Purchases</strong>.</li>
+        <li>Make sure you're signed into the same Apple ID you used for the purchase.</li>
+        <li>Check <strong>Settings &gt; [Your Name] &gt; Subscriptions</strong> to confirm RiseReps Pro is listed and active.</li>
+        <li>If it still doesn't unlock, email us with the date of purchase and the Apple ID email — we'll work with Apple to resolve it.</li>
+      </ol>
+    </details>
+
+    <details>
+      <summary>How do I cancel my subscription?</summary>
+      <ol>
+        <li>Open <strong>Settings &gt; [Your Name] &gt; Subscriptions</strong> on your iPhone.</li>
+        <li>Tap <strong>RiseReps Pro</strong>.</li>
+        <li>Tap <strong>Cancel Subscription</strong>.</li>
+      </ol>
+      <p>
+        Cancellation takes effect at the end of your current billing period. Apple — not RiseReps — handles billing,
+        renewals, and refund requests. For refunds visit <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>.
+      </p>
+    </details>
+
+    <details>
+      <summary>How does Accountability Partner work?</summary>
+      <ul>
+        <li>Both you and your partner need an active iCloud account on your iPhones.</li>
+        <li>Open <strong>Partner Center</strong> in the app and tap <em>Invite Partner</em>. Share the link via Messages, AirDrop, or any app.</li>
+        <li>Your partner taps the link, opens RiseReps, and accepts.</li>
+        <li>Once linked, you'll see each other's daily completion status, streak, and can send a "nudge" if your partner sleeps in.</li>
+        <li>Pairing is a Pro feature. The pairing data is exchanged through your private iCloud — RiseReps does not run a server, and we cannot read it.</li>
+        <li>To unlink, open Partner Center and tap <em>Unlink</em>.</li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>How do I change my exercise, alarm sound, or rep target?</summary>
+      <ul>
+        <li><strong>Exercise:</strong> tap an alarm and choose between Push-ups, Squats, or Jumping Jacks.</li>
+        <li><strong>Alarm sound:</strong> RiseReps &gt; Settings &gt; <em>Alarm Sound</em>.</li>
+        <li><strong>Rep target:</strong> rep targets adapt to your level via the progression system. You can override per-alarm in the alarm editor.</li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>How do I delete my data?</summary>
+      <p>
+        Nearly all RiseReps data is stored locally on your device. To delete it:
+      </p>
+      <ul>
+        <li>Open RiseReps &gt; Settings &gt; <strong>Reset App</strong> to wipe local data, or</li>
+        <li>Delete RiseReps from your home screen — iOS removes all app data automatically.</li>
+        <li>If you've paired a partner, also tap <em>Unlink Partner</em> first so the iCloud-shared record is removed.</li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>Can I use RiseReps on iPad or Apple Watch?</summary>
+      <p>
+        RiseReps is iPhone-only at launch. iPad and Apple Watch support are not yet available. Let us know if you'd like them — feature requests genuinely shape the roadmap.
+      </p>
+    </details>
+
+    <details>
+      <summary>Is my camera footage stored or uploaded?</summary>
+      <p>
+        No. RiseReps uses Apple's on-device Vision body-pose framework. Frames are analyzed in real time and discarded.
+        Nothing is recorded, stored, or transmitted — not by us, not by anyone.
+        See our <a href="privacy.html">Privacy Policy</a> for the full breakdown.
+      </p>
+    </details>
+
+    <h2>Feature Requests &amp; Feedback</h2>
+    <p>
+      RiseReps is built by a small team that actually reads every email. If something is broken, missing, or could be better,
+      tell us at <a href="mailto:support@riserep.app">support@riserep.app</a>. The most-requested ideas usually ship within a release or two.
+    </p>
+
+    <h2>Other Pages</h2>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="privacy.html">Privacy Policy</a></li>
+      <li><a href="privacy-choices.html">Your Privacy Choices</a></li>
+    </ul>
+
+    <footer>
+      © RiseReps. All rights reserved. ·
+      <a href="mailto:support@riserep.app">support@riserep.app</a>
+    </footer>
+  </div>
+</body>
+</html>
