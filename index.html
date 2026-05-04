@@ -6,7 +6,7 @@
 <title>RiseReps — Earn Your Morning</title>
 <meta
   name="description"
-  content="RiseReps is the proof-of-wake alarm. No snooze, no loopholes, no sleepy scrolling. Complete your reps to dismiss the alarm and start the day with momentum."
+  content="RiseReps is the proof-of-wake alarm. No snooze. The alarm only stops when the camera sees you complete your reps."
 />
 <link rel="icon" type="image/png" href="assets/riserep-logo.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -17,81 +17,55 @@
 />
 <style>
   :root {
-    --cream: #f5f0e8;
-    --cream-soft: #fbf8f1;
-    --sand: #e5dccd;
-    --stone: #b4aa9a;
-    --graphite: #0e0e10;
-    --graphite-soft: #1a1a1e;
-    --card-dark: #1c1c1e;
-    --card-dark-elevated: #232326;
-    --ink: #1c1c1e;
-    --muted: #6f6a62;
-    --muted-soft: #8e877c;
+    --cream: #f4efe5;
+    --cream-soft: #faf6ee;
+    --ink: #14141a;
+    --ink-soft: #2c2c33;
+    --muted: #5a5750;
+    --line: rgba(20, 20, 26, 0.1);
+    --line-dark: rgba(255, 255, 255, 0.1);
     --gold: #c4a94d;
-    --gold-soft: #d4c88a;
     --gold-deep: #8b7632;
-    --olive: #6b8e5a;
-    --danger: #c45c4d;
-    --border-light: rgba(28, 28, 30, 0.08);
-    --border-dark: rgba(255, 255, 255, 0.08);
-    --shadow-soft: 0 24px 60px rgba(22, 18, 10, 0.08);
+    --graphite: #0e0e10;
+    --graphite-soft: #18181b;
     --shadow-card: 0 30px 70px rgba(12, 12, 14, 0.18);
-    --radius-xl: 36px;
+    --shadow-soft: 0 16px 40px rgba(20, 18, 10, 0.08);
     --radius-lg: 28px;
-    --radius-md: 22px;
-    --wrap: 1180px;
+    --radius-md: 20px;
+    --wrap: 1140px;
   }
 
-  * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
 
-  html {
-    scroll-behavior: smooth;
-  }
+  html { scroll-behavior: smooth; }
 
   body {
-    min-height: 100vh;
-    background:
-      radial-gradient(circle at top left, rgba(212, 200, 138, 0.26), transparent 28%),
-      radial-gradient(circle at 80% 14%, rgba(196, 169, 77, 0.18), transparent 24%),
-      linear-gradient(180deg, #f8f4ed 0%, #f5f0e8 26%, #f0eadd 55%, #111113 55.1%, #0e0e10 100%);
+    background: var(--cream);
     color: var(--ink);
     font-family: "Plus Jakarta Sans", sans-serif;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
     overflow-x: hidden;
+    line-height: 1.55;
   }
 
-  img {
-    display: block;
-    max-width: 100%;
-  }
-
-  a {
-    color: inherit;
-    text-decoration: none;
-  }
-
-  button {
-    font: inherit;
-  }
+  img { display: block; max-width: 100%; }
+  a { color: inherit; text-decoration: none; }
+  button { font: inherit; }
 
   .wrap {
     width: min(var(--wrap), calc(100% - 40px));
     margin: 0 auto;
   }
 
+  /* ---------- Nav ---------- */
   .site-nav {
     position: sticky;
     top: 0;
     z-index: 100;
-    background: rgba(248, 244, 237, 0.7);
-    backdrop-filter: blur(18px) saturate(160%);
-    border-bottom: 1px solid rgba(28, 28, 30, 0.06);
+    background: rgba(244, 239, 229, 0.85);
+    backdrop-filter: blur(16px) saturate(160%);
+    border-bottom: 1px solid var(--line);
   }
 
   .site-nav .wrap {
@@ -99,135 +73,80 @@
     align-items: center;
     justify-content: space-between;
     gap: 24px;
-    min-height: 78px;
+    min-height: 72px;
   }
 
   .brand {
     display: inline-flex;
     align-items: center;
-    gap: 12px;
+    gap: 10px;
   }
 
   .brand img {
-    width: 34px;
-    height: 34px;
+    width: 38px;
+    height: 38px;
     object-fit: contain;
   }
 
-  .brand span,
-  .nav-pill,
-  .section-kicker,
-  .mini-label,
-  .stat-label,
-  .step-index,
-  .quote-mark {
-    font-family: "Bebas Neue", sans-serif;
-    letter-spacing: 0.14em;
+  .brand-mark {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-weight: 800;
+    font-size: 1.15rem;
+    letter-spacing: -0.01em;
+    color: var(--ink);
   }
 
-  .brand span {
-    font-size: 1.45rem;
-    color: var(--muted);
-  }
+  .brand-mark .accent { color: var(--gold-deep); }
 
   .nav-links {
     display: flex;
     align-items: center;
-    gap: 26px;
-    color: var(--muted);
+    gap: 28px;
+    color: var(--ink-soft);
     font-size: 0.95rem;
     font-weight: 600;
   }
 
-  .nav-links a {
-    transition: color 180ms ease;
-  }
-
-  .nav-links a:hover {
-    color: var(--ink);
-  }
+  .nav-links a:hover { color: var(--gold-deep); }
 
   .nav-cta {
     display: inline-flex;
     align-items: center;
-    gap: 10px;
-    padding: 12px 18px;
+    padding: 12px 20px;
     border-radius: 999px;
     background: var(--graphite);
     color: var(--cream);
-    box-shadow: 0 12px 30px rgba(28, 28, 30, 0.18);
+    font-weight: 700;
+    font-size: 0.95rem;
+    box-shadow: 0 10px 24px rgba(14, 14, 16, 0.18);
+    transition: transform 180ms ease;
   }
 
-  .hero {
-    padding: 72px 0 54px;
-  }
+  .nav-cta:hover { transform: translateY(-1px); }
 
-  .hero-grid {
-    display: grid;
-    grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.95fr);
-    gap: 54px;
-    align-items: center;
-  }
-
-  .nav-pill,
-  .section-kicker {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    padding: 10px 16px;
-    border-radius: 999px;
-    font-size: 0.9rem;
-    color: var(--gold-deep);
-    background: rgba(255, 255, 255, 0.58);
-    border: 1px solid rgba(196, 169, 77, 0.18);
-    box-shadow: 0 10px 25px rgba(196, 169, 77, 0.08);
-  }
-
-  .signal-dot {
-    width: 9px;
-    height: 9px;
-    border-radius: 999px;
-    background: linear-gradient(180deg, var(--gold-soft), var(--gold));
-    box-shadow: 0 0 0 6px rgba(196, 169, 77, 0.1);
-  }
-
-  h1,
-  h2,
-  h3 {
-    letter-spacing: -0.04em;
-    line-height: 0.96;
-  }
-
-  h1 {
-    margin-top: 22px;
-    font-size: clamp(3.7rem, 7vw, 6.7rem);
-    max-width: 10ch;
-  }
-
-  .hero-copy p {
-    margin-top: 24px;
-    max-width: 35rem;
-    font-size: 1.1rem;
-    line-height: 1.75;
-    color: var(--muted);
-  }
-
-  .hero-copy strong,
-  .feature-copy strong,
-  .cta-copy strong {
+  /* ---------- Shared ---------- */
+  h1, h2, h3 {
+    letter-spacing: -0.035em;
+    line-height: 1.02;
     color: var(--ink);
   }
 
-  .highlight {
+  .kicker {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: "Bebas Neue", sans-serif;
+    letter-spacing: 0.18em;
+    font-size: 0.86rem;
     color: var(--gold-deep);
+    margin-bottom: 18px;
   }
 
-  .hero-actions {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    flex-wrap: wrap;
-    margin-top: 34px;
+  .kicker .dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 999px;
+    background: var(--gold);
   }
 
   .button {
@@ -235,630 +154,306 @@
     align-items: center;
     justify-content: center;
     gap: 10px;
-    min-height: 56px;
-    padding: 0 24px;
+    min-height: 54px;
+    padding: 0 26px;
     border-radius: 999px;
     border: 1px solid transparent;
     font-size: 0.98rem;
     font-weight: 700;
-    transition:
-      transform 180ms ease,
-      box-shadow 180ms ease,
-      border-color 180ms ease,
-      background 180ms ease,
-      color 180ms ease;
+    transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease;
   }
 
-  .button:hover {
-    transform: translateY(-2px);
-  }
+  .button:hover { transform: translateY(-2px); }
 
   .button-primary {
-    background: linear-gradient(180deg, #d8c56f 0%, var(--gold) 100%);
-    color: var(--graphite);
-    box-shadow: 0 18px 40px rgba(196, 169, 77, 0.28);
+    background: var(--graphite);
+    color: var(--cream);
+    box-shadow: 0 14px 30px rgba(14, 14, 16, 0.22);
   }
+
+  .button-primary:hover { background: #1d1d22; }
 
   .button-secondary {
-    background: rgba(255, 255, 255, 0.7);
-    border-color: rgba(28, 28, 30, 0.1);
+    background: transparent;
+    border-color: var(--ink);
     color: var(--ink);
   }
 
-  .hero-meta {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 14px;
-    margin-top: 34px;
-    max-width: 44rem;
-  }
-
-  .meta-card,
-  .feature-card,
-  .proof-card,
-  .quote-card,
-  .final-panel {
-    border: 1px solid var(--border-light);
-    border-radius: var(--radius-md);
-    background: rgba(255, 255, 255, 0.64);
-    box-shadow: var(--shadow-soft);
-  }
-
-  .meta-card {
-    padding: 18px 18px 16px;
-  }
-
-  .stat-label {
-    font-size: 0.9rem;
-    color: var(--muted-soft);
-  }
-
-  .stat-value {
-    margin-top: 10px;
-    font-size: 1.7rem;
-    font-weight: 800;
-    letter-spacing: -0.05em;
-  }
-
-  .hero-visual {
-    position: relative;
-    min-height: 760px;
-  }
-
-  .hero-visual::before {
-    content: "";
-    position: absolute;
-    inset: 4% 8% 18% 18%;
-    border-radius: 45px;
-    background:
-      radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.55), transparent 36%),
-      radial-gradient(circle at 80% 15%, rgba(196, 169, 77, 0.22), transparent 30%),
-      linear-gradient(180deg, rgba(255, 255, 255, 0.84), rgba(255, 255, 255, 0.26));
-    filter: blur(8px);
-  }
-
-  .visual-card {
-    position: absolute;
-    border-radius: 34px;
-    overflow: hidden;
-    box-shadow: var(--shadow-card);
-  }
-
-  .visual-card img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  .visual-primary {
-    width: min(320px, 48vw);
-    aspect-ratio: 384 / 832;
-    right: 8%;
-    top: 6%;
-    z-index: 3;
-  }
-
-  .visual-secondary {
-    width: min(245px, 38vw);
-    aspect-ratio: 384 / 832;
-    left: 0;
-    top: 30%;
-    z-index: 2;
-  }
-
-  .visual-tertiary {
-    width: min(230px, 34vw);
-    aspect-ratio: 384 / 832;
-    right: 14%;
-    bottom: 0;
-    z-index: 1;
-  }
-
-  .floating-panel {
-    position: absolute;
-    z-index: 4;
-    border-radius: 30px;
-    padding: 22px;
-    background: rgba(18, 18, 20, 0.94);
-    color: var(--cream);
-    border: 1px solid var(--border-dark);
-    box-shadow: 0 26px 60px rgba(12, 12, 14, 0.28);
-  }
-
-  .alarm-panel {
-    left: 8%;
-    top: 10%;
-    width: min(290px, 46vw);
-  }
-
-  .alarm-row,
-  .lock-row,
-  .mini-metric,
-  .timeline-node,
-  .quote-attribution,
-  .footer-bar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 14px;
-  }
-
-  .mini-label {
-    color: rgba(245, 240, 232, 0.58);
-    font-size: 0.88rem;
-  }
-
-  .alarm-time {
-    margin-top: 20px;
-    font-size: clamp(3rem, 7vw, 4.6rem);
-    font-weight: 800;
-    letter-spacing: -0.07em;
-  }
-
-  .alarm-caption {
-    margin-top: 8px;
-    color: rgba(245, 240, 232, 0.72);
-    line-height: 1.6;
-  }
-
-  .lock-badge,
-  .status-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    padding: 8px 12px;
-    border-radius: 999px;
-    background: rgba(196, 169, 77, 0.12);
-    color: var(--gold-soft);
-    font-size: 0.88rem;
-    font-weight: 700;
-  }
-
-  .alarm-days {
-    display: flex;
-    gap: 8px;
-    margin-top: 18px;
-  }
-
-  .alarm-days span {
-    width: 28px;
-    height: 28px;
-    display: grid;
-    place-items: center;
-    border-radius: 999px;
-    background: rgba(255, 255, 255, 0.07);
-    color: rgba(245, 240, 232, 0.35);
-    font-size: 0.82rem;
-    font-weight: 700;
-  }
-
-  .alarm-days .active {
+  .button-gold {
     background: var(--gold);
     color: var(--graphite);
+    box-shadow: 0 14px 30px rgba(196, 169, 77, 0.32);
   }
 
-  .mini-proof {
-    right: 0;
-    top: 47%;
-    width: min(260px, 42vw);
-    background: rgba(255, 252, 246, 0.88);
-    color: var(--ink);
-    border: 1px solid rgba(28, 28, 30, 0.08);
-    box-shadow: var(--shadow-soft);
+  /* ---------- Hero ---------- */
+  .hero {
+    padding: 88px 0 96px;
   }
 
-  .mini-proof strong {
-    font-size: 2.1rem;
-    letter-spacing: -0.06em;
-  }
-
-  .mini-proof p {
-    margin-top: 10px;
-    color: var(--muted);
-    line-height: 1.7;
-  }
-
-  .strip {
-    padding: 28px 0 42px;
-  }
-
-  .proof-band {
+  .hero-grid {
     display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 16px;
-  }
-
-  .proof-card {
-    padding: 22px;
-  }
-
-  .proof-card strong {
-    display: block;
-    font-size: 1.65rem;
-    font-weight: 800;
-    letter-spacing: -0.05em;
-  }
-
-  .proof-card span {
-    display: block;
-    margin-top: 10px;
-    color: var(--muted);
-    line-height: 1.6;
-  }
-
-  section {
-    position: relative;
-  }
-
-  .dark-section {
-    color: var(--cream);
-    background:
-      radial-gradient(circle at 10% 10%, rgba(196, 169, 77, 0.08), transparent 22%),
-      radial-gradient(circle at 90% 20%, rgba(107, 142, 90, 0.12), transparent 28%),
-      linear-gradient(180deg, #111113 0%, #0e0e10 100%);
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-  }
-
-  .feature-section {
-    padding: 124px 0;
-  }
-
-  .feature-layout {
-    display: grid;
-    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
-    gap: 42px;
-    align-items: start;
-  }
-
-  .feature-copy .section-kicker {
-    background: rgba(196, 169, 77, 0.1);
-    color: var(--gold-soft);
-    border-color: rgba(196, 169, 77, 0.16);
-  }
-
-  h2 {
-    margin-top: 20px;
-    font-size: clamp(2.6rem, 5vw, 4.8rem);
-    max-width: 11ch;
-  }
-
-  .feature-copy p,
-  .quote-copy p,
-  .cta-copy p,
-  .footer-copy p {
-    margin-top: 22px;
-    max-width: 38rem;
-    font-size: 1.05rem;
-    line-height: 1.82;
-  }
-
-  .feature-copy p,
-  .quote-copy p {
-    color: rgba(245, 240, 232, 0.72);
-  }
-
-  .feature-grid {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 16px;
-  }
-
-  .feature-card {
-    min-height: 210px;
-    padding: 24px;
-    background: linear-gradient(180deg, rgba(34, 34, 38, 0.96), rgba(22, 22, 25, 0.96));
-    border-color: rgba(255, 255, 255, 0.06);
-    color: var(--cream);
-    box-shadow: none;
-  }
-
-  .feature-icon {
-    width: 46px;
-    height: 46px;
-    border-radius: 14px;
-    display: grid;
-    place-items: center;
-    background: rgba(196, 169, 77, 0.12);
-    color: var(--gold-soft);
-    font-size: 1.25rem;
-  }
-
-  .feature-card h3,
-  .quote-card h3 {
-    margin-top: 20px;
-    font-size: 1.45rem;
-    font-weight: 700;
-    letter-spacing: -0.04em;
-  }
-
-  .feature-card p {
-    margin-top: 12px;
-    color: rgba(245, 240, 232, 0.64);
-    line-height: 1.72;
-  }
-
-  .timeline-shell {
-    margin-top: 30px;
-    padding: 26px;
-    border-radius: var(--radius-lg);
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.01));
-    border: 1px solid rgba(255, 255, 255, 0.08);
-  }
-
-  .timeline-grid {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 18px;
-  }
-
-  .timeline-column {
-    border-radius: 26px;
-    padding: 22px;
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.06);
-  }
-
-  .timeline-column h3 {
-    font-size: 1.1rem;
-    color: var(--cream);
-  }
-
-  .timeline-column p {
-    margin-top: 6px;
-    color: rgba(245, 240, 232, 0.62);
-    line-height: 1.6;
-  }
-
-  .timeline-list {
-    margin-top: 22px;
-    display: grid;
-    gap: 14px;
-  }
-
-  .timeline-node {
-    align-items: flex-start;
-  }
-
-  .timeline-node time {
-    min-width: 62px;
-    font-weight: 800;
-    letter-spacing: -0.04em;
-  }
-
-  .timeline-node div {
-    flex: 1;
-    padding: 13px 14px;
-    border-radius: 18px;
-    line-height: 1.55;
-  }
-
-  .timeline-warning div {
-    background: rgba(196, 92, 77, 0.12);
-    color: #f2d7d1;
-  }
-
-  .timeline-success div {
-    background: rgba(107, 142, 90, 0.14);
-    color: #dce6d8;
-  }
-
-  .gallery-section {
-    padding: 128px 0;
-  }
-
-  .gallery-layout {
-    display: grid;
-    grid-template-columns: minmax(0, 0.92fr) minmax(320px, 1.08fr);
-    gap: 48px;
+    grid-template-columns: minmax(0, 1.05fr) minmax(280px, 0.95fr);
+    gap: 60px;
     align-items: center;
   }
 
-  .gallery-copy p {
-    color: var(--muted);
-  }
-
-  .gallery-points {
-    display: grid;
-    gap: 14px;
-    margin-top: 32px;
-  }
-
-  .gallery-point {
-    display: flex;
-    align-items: flex-start;
-    gap: 14px;
-    padding: 18px 20px;
-    border-radius: 22px;
-    background: rgba(255, 255, 255, 0.58);
-    border: 1px solid rgba(28, 28, 30, 0.08);
-    box-shadow: var(--shadow-soft);
-  }
-
-  .gallery-point .feature-icon {
-    flex: none;
-    background: rgba(196, 169, 77, 0.12);
-    color: var(--gold-deep);
-  }
-
-  .gallery-wall {
-    position: relative;
-    min-height: 760px;
-  }
-
-  .gallery-wall::before {
-    content: "";
-    position: absolute;
-    inset: 12% 18% 10% 12%;
-    border-radius: 38px;
-    background:
-      radial-gradient(circle at 30% 28%, rgba(196, 169, 77, 0.2), transparent 24%),
-      radial-gradient(circle at 78% 78%, rgba(107, 142, 90, 0.16), transparent 20%),
-      linear-gradient(180deg, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.18));
-    filter: blur(12px);
-  }
-
-  .wall-card {
-    position: absolute;
-    border-radius: 32px;
-    overflow: hidden;
-    box-shadow: var(--shadow-card);
-  }
-
-  .wall-card img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  .wall-large {
-    width: min(300px, 44vw);
-    aspect-ratio: 384 / 832;
-    left: 8%;
-    top: 6%;
-  }
-
-  .wall-medium {
-    width: min(260px, 40vw);
-    aspect-ratio: 384 / 832;
-    right: 0;
-    top: 18%;
-  }
-
-  .wall-small {
-    width: min(220px, 34vw);
-    aspect-ratio: 384 / 832;
-    left: 28%;
-    bottom: 0;
-  }
-
-  .results-panel {
-    position: absolute;
-    right: 7%;
-    bottom: 5%;
-    z-index: 4;
-    width: min(250px, 40vw);
-    padding: 22px;
-    border-radius: 28px;
-    background: rgba(255, 252, 246, 0.92);
-    border: 1px solid rgba(28, 28, 30, 0.08);
-    box-shadow: var(--shadow-soft);
-  }
-
-  .results-panel p {
-    margin-top: 12px;
-    color: var(--muted);
-    line-height: 1.7;
-  }
-
-  .quote-section {
-    padding: 120px 0 128px;
-  }
-
-  .quote-layout {
-    display: grid;
-    grid-template-columns: minmax(0, 0.95fr) minmax(320px, 1.05fr);
-    gap: 34px;
-    align-items: center;
-  }
-
-  .quote-copy {
-    color: var(--cream);
-  }
-
-  .quote-card {
-    padding: 30px;
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.02));
-    border-color: rgba(255, 255, 255, 0.08);
-    color: var(--cream);
-    box-shadow: none;
-  }
-
-  .quote-mark {
-    color: var(--gold-soft);
-    font-size: 1.1rem;
-  }
-
-  blockquote {
-    margin-top: 18px;
-    font-size: clamp(1.6rem, 3vw, 2.55rem);
-    line-height: 1.2;
-    letter-spacing: -0.05em;
-  }
-
-  .quote-card p {
-    margin-top: 16px;
-    color: rgba(245, 240, 232, 0.66);
-    line-height: 1.75;
-  }
-
-  .quote-attribution {
-    margin-top: 24px;
-    justify-content: flex-start;
-    color: rgba(245, 240, 232, 0.54);
-    font-size: 0.96rem;
-  }
-
-  .quote-attribution strong {
-    color: var(--cream);
-  }
-
-  .final-section {
-    padding: 96px 0 110px;
-  }
-
-  .final-panel {
-    padding: 42px;
-    border-radius: var(--radius-xl);
-    background:
-      radial-gradient(circle at top right, rgba(196, 169, 77, 0.12), transparent 30%),
-      linear-gradient(135deg, rgba(255, 255, 255, 0.82), rgba(255, 255, 255, 0.56));
-  }
-
-  .final-layout {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(260px, 0.7fr);
-    gap: 30px;
-    align-items: end;
-  }
-
-  .final-panel h2 {
+  h1 {
+    font-size: clamp(3rem, 6.4vw, 5.6rem);
     max-width: 12ch;
   }
 
-  .footer-copy p {
-    color: var(--muted);
+  h1 .highlight { color: var(--gold-deep); }
+
+  .hero-copy p {
+    margin-top: 24px;
+    max-width: 36rem;
+    font-size: 1.1rem;
+    line-height: 1.65;
+    color: var(--ink-soft);
   }
 
-  .footer-actions {
+  .hero-actions {
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-top: 32px;
+  }
+
+  .hero-phone {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero-phone img {
+    width: min(360px, 90%);
+    border-radius: 42px;
+    box-shadow: var(--shadow-card);
+  }
+
+  /* ---------- How it works ---------- */
+  .steps {
+    padding: 88px 0;
+    background: var(--cream-soft);
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+  }
+
+  .steps-head {
+    text-align: center;
+    margin-bottom: 56px;
+  }
+
+  .steps-head h2 {
+    font-size: clamp(2.2rem, 4vw, 3.4rem);
+    max-width: 18ch;
+    margin: 0 auto;
+  }
+
+  .steps-head p {
+    margin: 18px auto 0;
+    max-width: 40rem;
+    color: var(--ink-soft);
+    font-size: 1.05rem;
+  }
+
+  .steps-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 28px;
+  }
+
+  .step {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: var(--radius-lg);
+    padding: 28px 26px 32px;
+    box-shadow: var(--shadow-soft);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .step-number {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 1rem;
+    letter-spacing: 0.2em;
+    color: var(--gold-deep);
+  }
+
+  .step h3 {
+    margin-top: 10px;
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+
+  .step p {
+    margin-top: 12px;
+    color: var(--ink-soft);
+    font-size: 0.98rem;
+  }
+
+  .step-image {
+    margin-top: 24px;
+    border-radius: 22px;
+    overflow: hidden;
+    background: var(--cream);
+    aspect-ratio: 9 / 16.5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .step-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* ---------- Feature rows (alternating) ---------- */
+  .feature-row {
+    padding: 100px 0;
+  }
+
+  .feature-row + .feature-row { padding-top: 0; }
+
+  .feature-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(280px, 0.9fr);
+    gap: 60px;
+    align-items: center;
+  }
+
+  .feature-grid.reverse {
+    grid-template-columns: minmax(280px, 0.9fr) minmax(0, 1fr);
+  }
+
+  .feature-grid.reverse .feature-text { order: 2; }
+  .feature-grid.reverse .feature-image { order: 1; }
+
+  .feature-text h2 {
+    font-size: clamp(2rem, 3.6vw, 3rem);
+    max-width: 14ch;
+  }
+
+  .feature-text p {
+    margin-top: 20px;
+    color: var(--ink-soft);
+    font-size: 1.05rem;
+    max-width: 32rem;
+  }
+
+  .feature-bullets {
+    margin-top: 26px;
+    display: grid;
+    gap: 14px;
+  }
+
+  .feature-bullets li {
+    list-style: none;
+    padding-left: 30px;
+    position: relative;
+    color: var(--ink-soft);
+    font-size: 1rem;
+  }
+
+  .feature-bullets li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 16px;
+    height: 16px;
+    border-radius: 999px;
+    background: var(--gold);
+    box-shadow: 0 0 0 4px rgba(196, 169, 77, 0.18);
+  }
+
+  .feature-image {
+    display: flex;
+    justify-content: center;
+  }
+
+  .feature-image img {
+    width: min(340px, 100%);
+    border-radius: 36px;
+    box-shadow: var(--shadow-card);
+  }
+
+  /* ---------- Dark accountability section ---------- */
+  .dark-band {
+    background: var(--graphite);
+    color: var(--cream);
+    padding: 100px 0;
+  }
+
+  .dark-band h2,
+  .dark-band h3 { color: var(--cream); }
+
+  .dark-band .feature-text p,
+  .dark-band .feature-bullets li { color: rgba(244, 239, 229, 0.78); }
+
+  .dark-band .kicker { color: var(--gold); }
+
+  /* ---------- Final CTA ---------- */
+  .final {
+    padding: 110px 0;
+    text-align: center;
+    background: var(--cream-soft);
+    border-top: 1px solid var(--line);
+  }
+
+  .final h2 {
+    font-size: clamp(2.4rem, 4.5vw, 3.8rem);
+    max-width: 16ch;
+    margin: 0 auto;
+  }
+
+  .final p {
+    margin: 22px auto 0;
+    max-width: 38rem;
+    font-size: 1.1rem;
+    color: var(--ink-soft);
+  }
+
+  .final-actions {
+    margin-top: 36px;
+    display: flex;
+    justify-content: center;
     gap: 14px;
     flex-wrap: wrap;
   }
 
-  .footer-bar {
-    margin-top: 28px;
-    padding-top: 22px;
-    border-top: 1px solid rgba(28, 28, 30, 0.08);
+  /* ---------- Footer ---------- */
+  footer {
+    padding: 36px 0 48px;
+    border-top: 1px solid var(--line);
+    background: var(--cream);
+  }
+
+  footer .wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
     color: var(--muted);
-    font-size: 0.94rem;
+    font-size: 0.92rem;
   }
 
   .footer-links {
     display: flex;
-    align-items: center;
-    gap: 18px;
+    gap: 22px;
     flex-wrap: wrap;
   }
 
+  .footer-links a:hover { color: var(--ink); }
+
+  /* ---------- Reveal ---------- */
   .reveal {
     opacity: 0;
-    transform: translateY(26px);
-    transition:
-      opacity 700ms ease,
-      transform 700ms ease;
+    transform: translateY(22px);
+    transition: opacity 600ms ease, transform 600ms ease;
   }
 
   .reveal.is-visible {
@@ -866,476 +461,242 @@
     transform: translateY(0);
   }
 
-  @media (max-width: 1100px) {
+  /* ---------- Responsive ---------- */
+  @media (max-width: 960px) {
+    .hero { padding: 56px 0 64px; }
     .hero-grid,
-    .feature-layout,
-    .gallery-layout,
-    .quote-layout,
-    .final-layout {
+    .feature-grid,
+    .feature-grid.reverse {
       grid-template-columns: 1fr;
+      gap: 40px;
+    }
+    .feature-grid.reverse .feature-text { order: 2; }
+    .feature-grid.reverse .feature-image { order: 1; }
+
+    .steps-grid {
+      grid-template-columns: 1fr;
+      gap: 18px;
     }
 
-    .hero-visual,
-    .gallery-wall {
-      min-height: 640px;
-      margin-top: 20px;
-    }
+    .feature-row { padding: 72px 0; }
+    .dark-band, .steps, .final { padding: 72px 0; }
 
-    .proof-band {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .footer-actions {
-      justify-content: flex-start;
-    }
+    .nav-links { display: none; }
   }
 
-  @media (max-width: 760px) {
-    body {
-      background:
-        radial-gradient(circle at top left, rgba(212, 200, 138, 0.26), transparent 24%),
-        linear-gradient(180deg, #f8f4ed 0%, #f5f0e8 35%, #111113 35.1%, #0e0e10 100%);
-    }
-
-    .site-nav .wrap {
-      min-height: 72px;
-    }
-
-    .nav-links {
-      display: none;
-    }
-
-    .hero {
-      padding-top: 42px;
-    }
-
-    h1 {
-      max-width: none;
-    }
-
-    .hero-meta,
-    .proof-band,
-    .feature-grid,
-    .timeline-grid {
-      grid-template-columns: 1fr;
-    }
-
-    .hero-visual,
-    .gallery-wall {
-      min-height: 720px;
-    }
-
-    .visual-primary,
-    .wall-large {
-      width: 70vw;
-      right: 0;
-      left: auto;
-    }
-
-    .visual-secondary,
-    .wall-medium {
-      width: 54vw;
-      left: 0;
-    }
-
-    .visual-tertiary,
-    .wall-small {
-      width: 48vw;
-    }
-
-    .alarm-panel {
-      top: 2%;
-      left: 0;
-      width: min(260px, 74vw);
-    }
-
-    .mini-proof {
-      top: auto;
-      right: 0;
-      bottom: 14%;
-      width: min(220px, 66vw);
-    }
-
-    .results-panel {
-      left: 0;
-      right: auto;
-      width: min(220px, 66vw);
-    }
-
-    .feature-section,
-    .gallery-section,
-    .quote-section {
-      padding: 96px 0;
-    }
-
-    .final-section {
-      padding: 78px 0 92px;
-    }
-
-    .final-panel {
-      padding: 30px;
-    }
-
-    .footer-bar {
-      flex-direction: column;
-      align-items: flex-start;
-    }
+  @media (max-width: 520px) {
+    .hero h1 { font-size: 2.6rem; }
+    .button { min-height: 50px; padding: 0 22px; }
   }
 </style>
 </head>
 <body>
   <nav class="site-nav">
     <div class="wrap">
-      <a class="brand" href="#top">
-        <img src="assets/riserep-logo.png" alt="RiseReps logo" />
-        <span>RiseReps</span>
+      <a class="brand" href="#top" aria-label="RiseReps home">
+        <img src="assets/riserep-logo.png" alt="" />
+        <span class="brand-mark">Rise<span class="accent">Reps</span></span>
       </a>
 
       <div class="nav-links" aria-label="Primary">
-        <a href="#how-it-works">How it works</a>
-        <a href="#experience">Experience</a>
-        <a href="#accountability">Accountability</a>
+        <a href="#how">How it works</a>
+        <a href="#proof">Proof-of-wake</a>
+        <a href="#partner">Partner</a>
       </div>
 
-      <a class="nav-cta" href="#cta">Build Your Morning</a>
+      <a class="nav-cta" href="#cta">Build My Morning</a>
     </div>
   </nav>
 
   <main id="top">
+    <!-- HERO -->
     <header class="hero">
       <div class="wrap hero-grid">
         <div class="hero-copy reveal">
-          <div class="nav-pill">
-            <span class="signal-dot" aria-hidden="true"></span>
+          <div class="kicker">
+            <span class="dot" aria-hidden="true"></span>
             Proof-of-wake alarm
           </div>
 
-          <h1>Earn your morning. <span class="highlight">One rep at a time.</span></h1>
+          <h1>Wake up. <span class="highlight">For real this time.</span></h1>
+
           <p>
-            RiseReps turns waking up into a physical action, not a negotiation.
-            <strong>No snooze. No sleepy scrolling.</strong> Your alarm stays live until
-            the camera verifies the reps and the day officially begins.
+            RiseReps is the alarm that only turns off when you actually move.
+            No snooze. No tap-to-dismiss. The camera watches you complete your
+            reps — then your day begins.
           </p>
 
           <div class="hero-actions">
             <a class="button button-primary" href="#cta">Build My Morning</a>
-            <a class="button button-secondary" href="#how-it-works">See how it works</a>
-          </div>
-
-          <div class="hero-meta">
-            <div class="meta-card">
-              <div class="stat-label">Wake-up system</div>
-              <div class="stat-value">Camera-verified</div>
-            </div>
-            <div class="meta-card">
-              <div class="stat-label">Strictness</div>
-              <div class="stat-value">Full lockdown</div>
-            </div>
-            <div class="meta-card">
-              <div class="stat-label">Momentum</div>
-              <div class="stat-value">Streak protected</div>
-            </div>
+            <a class="button button-secondary" href="#how">See how it works</a>
           </div>
         </div>
 
-        <div class="hero-visual reveal">
-          <div class="floating-panel alarm-panel">
-            <div class="alarm-row">
-              <span class="mini-label">Camera-verified alarm</span>
-              <span class="status-badge">Active</span>
-            </div>
-
-            <div class="alarm-time">5:30 AM</div>
-            <div class="alarm-caption">18 push-ups to dismiss. One alarm. One mission.</div>
-
-            <div class="lock-row" style="margin-top: 16px;">
-              <span class="lock-badge">Full lockdown</span>
-              <span class="mini-label">Tomorrow</span>
-            </div>
-
-            <div class="alarm-days" aria-label="Active alarm days">
-              <span class="active">M</span>
-              <span class="active">T</span>
-              <span class="active">W</span>
-              <span class="active">T</span>
-              <span class="active">F</span>
-              <span>S</span>
-              <span>S</span>
-            </div>
-          </div>
-
-          <div class="visual-card visual-primary">
-            <img src="assets/home.png" alt="RiseReps home screen with two alarms" />
-          </div>
-          <div class="visual-card visual-secondary">
-            <img src="assets/alarm-live.png" alt="RiseReps live alarm screen showing push-ups to dismiss" />
-          </div>
-          <div class="visual-card visual-tertiary">
-            <img src="assets/completion.png" alt="RiseReps workout completion screen" />
-          </div>
-
-          <div class="floating-panel mini-proof">
-            <div class="mini-label">Built to end the snooze spiral</div>
-            <strong>Up in under 3 minutes.</strong>
-            <p>
-              RiseReps replaces repeat alarms with one controlled sequence: alarm,
-              movement, done.
-            </p>
-          </div>
+        <div class="hero-phone reveal">
+          <img src="assets/screen-alarm.png" alt="RiseReps alarm screen showing 9:00 AM with 15 push-ups required to dismiss" />
         </div>
       </div>
     </header>
 
-    <div class="strip">
-      <div class="wrap proof-band reveal">
-        <div class="proof-card">
-          <strong>No snooze</strong>
-          <span>There is no tap-to-delay escape hatch. Movement is the only off switch.</span>
-        </div>
-        <div class="proof-card">
-          <strong>Actual reps</strong>
-          <span>The app uses the camera and pose detection so the wake-up work really happens.</span>
-        </div>
-        <div class="proof-card">
-          <strong>Partner nudges</strong>
-          <span>Stay accountable with a friend who can see the streak and send a push when needed.</span>
-        </div>
-        <div class="proof-card">
-          <strong>Wake analytics</strong>
-          <span>Track reps, wake time, completion rate, and streaks without losing the clean feel.</span>
-        </div>
-      </div>
-    </div>
-
-    <section class="dark-section feature-section" id="how-it-works">
-      <div class="wrap feature-layout">
-        <div class="feature-copy reveal">
-          <div class="section-kicker">
-            <span class="signal-dot" aria-hidden="true"></span>
+    <!-- HOW IT WORKS -->
+    <section class="steps" id="how">
+      <div class="wrap">
+        <div class="steps-head reveal">
+          <div class="kicker" style="justify-content: center;">
+            <span class="dot" aria-hidden="true"></span>
             How it works
           </div>
-          <h2>Designed to break the snooze cycle, not decorate it.</h2>
-          <p>
-            RiseReps is built around a simple truth: your brain is unreliable when the alarm
-            hits. The product removes that debate loop and swaps it for a clear physical
-            sequence that gets your blood moving fast.
-          </p>
-
-          <div class="timeline-shell">
-            <div class="timeline-grid">
-              <div class="timeline-column">
-                <h3>Typical morning</h3>
-                <p>More alarms. More drift. More panic.</p>
-                <div class="timeline-list">
-                  <div class="timeline-node timeline-warning">
-                    <time>6:30</time>
-                    <div>Alarm goes off</div>
-                  </div>
-                  <div class="timeline-node timeline-warning">
-                    <time>6:39</time>
-                    <div>Snooze. Check phone.</div>
-                  </div>
-                  <div class="timeline-node timeline-warning">
-                    <time>7:00</time>
-                    <div>Rush the morning half-awake.</div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="timeline-column">
-                <h3>RiseReps morning</h3>
-                <p>One alarm. One mission. Day started.</p>
-                <div class="timeline-list">
-                  <div class="timeline-node timeline-success">
-                    <time>6:30</time>
-                    <div>Alarm goes live</div>
-                  </div>
-                  <div class="timeline-node timeline-success">
-                    <time>6:31</time>
-                    <div>Complete the reps</div>
-                  </div>
-                  <div class="timeline-node timeline-success">
-                    <time>6:33</time>
-                    <div>Alarm handled. Streak protected.</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          <h2>Three steps. One unmissable morning.</h2>
+          <p>Set it the night before. Move your body when it goes off. Watch your streak compound.</p>
         </div>
 
-        <div class="feature-grid reveal" id="experience">
-          <article class="feature-card">
-            <div class="feature-icon" aria-hidden="true">01</div>
-            <h3>Wake-up workouts</h3>
-            <p>Push-ups, squats, and jumping jacks turn the alarm into a fast, measurable activation ritual.</p>
+        <div class="steps-grid">
+          <article class="step reveal">
+            <div class="step-number">Step 01</div>
+            <h3>Set your alarm.</h3>
+            <p>Pick the time, the exercise, and how strict you want it. Lockdown mode hides every other app until you finish.</p>
+            <div class="step-image">
+              <img src="assets/screen-home.png" alt="Home screen showing a 5:30 AM alarm set with 22 push-ups in Full Lockdown mode" />
+            </div>
           </article>
 
-          <article class="feature-card">
-            <div class="feature-icon" aria-hidden="true">02</div>
-            <h3>Lockdown modes</h3>
-            <p>Go from standard friction to full lockdown when you want less negotiation and more discipline.</p>
+          <article class="step reveal">
+            <div class="step-number">Step 02</div>
+            <h3>Do the reps.</h3>
+            <p>The alarm fires. The camera counts each rep using on-device pose detection. No fake taps. No shortcuts.</p>
+            <div class="step-image">
+              <img src="assets/screen-pose.png" alt="Camera view counting squats with body pose tracking overlaid" />
+            </div>
           </article>
 
-          <article class="feature-card">
-            <div class="feature-icon" aria-hidden="true">03</div>
-            <h3>Premium calm</h3>
-            <p>Warm cream surfaces, dark alarm cards, and muted gold accents make the experience feel focused, not frantic.</p>
-          </article>
-
-          <article class="feature-card">
-            <div class="feature-icon" aria-hidden="true">04</div>
-            <h3>Small wins, tracked</h3>
-            <p>Wake time, completion rate, reps, and streaks make consistency visible without cluttering the flow.</p>
+          <article class="step reveal">
+            <div class="step-number">Step 03</div>
+            <h3>Earn the day.</h3>
+            <p>Reps verified. Alarm off. Streak protected. You start the day already on the board.</p>
+            <div class="step-image">
+              <img src="assets/screen-completion.png" alt="Workout complete screen showing Done, 15 reps, day 12 streak" />
+            </div>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="gallery-section">
-      <div class="wrap gallery-layout">
-        <div class="gallery-copy reveal">
-          <div class="section-kicker">
-            <span class="signal-dot" aria-hidden="true"></span>
-            Inside the app
+    <!-- PROOF-OF-WAKE FEATURE -->
+    <section class="feature-row" id="proof" style="padding-top: 110px;">
+      <div class="wrap feature-grid">
+        <div class="feature-text reveal">
+          <div class="kicker">
+            <span class="dot" aria-hidden="true"></span>
+            Proof-of-wake
           </div>
-          <h2>Luxury-grade surfaces, built around ruthless clarity.</h2>
+          <h2>The alarm with no escape hatch.</h2>
           <p>
-            The product feels premium because it stays restrained. Large typography, generous spacing,
-            graphite contrast, and gold accents keep every moment clean while the system quietly handles
-            the hard part: getting you out of bed.
+            Most alarms reward weakness. A snooze button. A swipe. A vague promise to your future self. RiseReps removes the negotiation entirely.
           </p>
-
-          <div class="gallery-points">
-            <div class="gallery-point">
-              <div class="feature-icon" aria-hidden="true">A</div>
-              <div>
-                <strong>Alarm setup stays tactile.</strong>
-                <p>Choose the wake-up time, exercise, active days, and strictness in a flow that feels intentional and high-touch.</p>
-              </div>
-            </div>
-
-            <div class="gallery-point">
-              <div class="feature-icon" aria-hidden="true">B</div>
-              <div>
-                <strong>Stats stay easy to read.</strong>
-                <p>Weekly reps, wake consistency, streaks, and completion rate give you enough signal without turning the app into a spreadsheet.</p>
-              </div>
-            </div>
-
-            <div class="gallery-point">
-              <div class="feature-icon" aria-hidden="true">C</div>
-              <div>
-                <strong>Every screen reinforces momentum.</strong>
-                <p>From the live alarm to the completion state, the visual system keeps pushing one message: you showed up today.</p>
-              </div>
-            </div>
-          </div>
+          <ul class="feature-bullets">
+            <li>Camera-verified reps using on-device pose detection.</li>
+            <li>Optional Full Lockdown blocks other apps until you finish.</li>
+            <li>One alarm, one mission — no repeat triggers stacking up.</li>
+          </ul>
         </div>
-
-        <div class="gallery-wall reveal">
-          <div class="wall-card wall-large">
-            <img src="assets/stats.png" alt="RiseReps stats screen with wake time and reps charts" />
-          </div>
-          <div class="wall-card wall-medium">
-            <img src="assets/partner.png" alt="RiseReps partner accountability screen" />
-          </div>
-          <div class="wall-card wall-small">
-            <img src="assets/completion.png" alt="RiseReps completion screen showing streak protection" />
-          </div>
-
-          <div class="results-panel">
-            <div class="mini-label">Momentum dashboard</div>
-            <strong style="font-size: 2rem; letter-spacing: -0.05em;">126 reps. 14 day streak.</strong>
-            <p>The product lets consistency feel tangible, not abstract.</p>
-          </div>
+        <div class="feature-image reveal">
+          <img src="assets/screen-lockdown.png" alt="Workout First lockdown screen prompting user to complete reps in RiseReps to unlock other apps" />
         </div>
       </div>
     </section>
 
-    <section class="dark-section quote-section" id="accountability">
-      <div class="wrap quote-layout">
-        <div class="quote-copy reveal">
-          <div class="section-kicker">
-            <span class="signal-dot" aria-hidden="true"></span>
-            Accountability
+    <!-- STATS / TRANSFORMATION -->
+    <section class="feature-row">
+      <div class="wrap feature-grid reverse">
+        <div class="feature-text reveal">
+          <div class="kicker">
+            <span class="dot" aria-hidden="true"></span>
+            Momentum, made visible
           </div>
-          <h2>Built for discipline, with just enough social pressure.</h2>
+          <h2>You can finally see the streak.</h2>
           <p>
-            RiseReps doesn’t stop at the alarm. The partner layer adds a clean accountability loop:
-            synced progress, streak visibility, and a nudge when someone needs help getting moving.
+            Every wake-up logs itself. Reps, wake time, completion rate, longest streak — the kind of feedback loop that turns one good morning into thirty.
           </p>
+          <ul class="feature-bullets">
+            <li>Daily reps and wake-time charts at a glance.</li>
+            <li>Completion rate tells you how reliable you really are.</li>
+            <li>Current and longest streak — the only two numbers that matter.</li>
+          </ul>
         </div>
-
-        <div class="quote-card reveal">
-          <div class="quote-mark">RiseReps mindset</div>
-          <blockquote>
-            “One alarm. One mission. The day doesn’t start when you open your eyes. It starts when you move.”
-          </blockquote>
-          <p>
-            That’s the product philosophy behind the entire experience. It is not trying to be a softer alarm,
-            a prettier tracker, or another habit app you can ignore. It is a wake-up system.
-          </p>
-          <div class="quote-attribution">
-            <strong>Partner-ready</strong>
-            <span>Shared streaks, synced stats, daily nudges</span>
-          </div>
+        <div class="feature-image reveal">
+          <img src="assets/screen-stats.png" alt="Stats screen showing 610 reps, 5:37 AM average wake time, 86% completion rate over 30 days" />
         </div>
       </div>
     </section>
 
-    <section class="final-section" id="cta">
+    <!-- PARTNER ACCOUNTABILITY (DARK) -->
+    <section class="dark-band" id="partner">
+      <div class="wrap feature-grid">
+        <div class="feature-text reveal">
+          <div class="kicker">
+            <span class="dot" aria-hidden="true"></span>
+            Built-in accountability
+          </div>
+          <h2>One partner. Zero excuses.</h2>
+          <p>
+            Pair with a friend and your stats sync automatically. They see your streak. You see theirs. One clean nudge per day when someone needs to get moving.
+          </p>
+          <ul class="feature-bullets">
+            <li>Shared streaks and synced wake stats.</li>
+            <li>One nudge per day — useful, never spammy.</li>
+            <li>Unpair anytime. No social feed, no leaderboard noise.</li>
+          </ul>
+        </div>
+        <div class="feature-image reveal">
+          <img src="assets/screen-partner.png" alt="Partner screen showing Jordan with a 31 day streak and a Send Nudge button" />
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="final" id="cta">
+      <div class="wrap reveal">
+        <div class="kicker" style="justify-content: center;">
+          <span class="dot" aria-hidden="true"></span>
+          Earn your morning
+        </div>
+        <h2>Stop negotiating with your alarm.</h2>
+        <p>
+          Set it tonight. Move tomorrow. Watch what changes when the first decision of your day is already won.
+        </p>
+        <div class="final-actions">
+          <a class="button button-gold" href="#top">Build My Morning</a>
+          <a class="button button-secondary" href="#how">See how it works</a>
+        </div>
+      </div>
+    </section>
+
+    <footer>
       <div class="wrap">
-        <div class="final-panel reveal">
-          <div class="final-layout">
-            <div class="footer-copy">
-              <div class="section-kicker">
-                <span class="signal-dot" aria-hidden="true"></span>
-                Final call
-              </div>
-              <h2>The alarm that proves you’re actually up.</h2>
-              <p>
-                RiseReps combines a premium interface with a harder behavioral edge:
-                <strong>camera-verified reps, clean wake analytics, lockdown settings, and accountability that sticks.</strong>
-                If the brand promise is “earn your morning,” this page now looks and feels like it.
-              </p>
-            </div>
-
-            <div class="footer-actions">
-              <a class="button button-primary" href="#top">Back to top</a>
-              <a class="button button-secondary" href="#how-it-works">Review the flow</a>
-            </div>
-          </div>
-
-          <div class="footer-bar">
-            <div class="brand">
-              <img src="assets/riserep-logo.png" alt="RiseReps logo" />
-              <span>RiseReps</span>
-            </div>
-            <div class="footer-links">
-              <span>Proof-of-wake alarm</span>
-              <span>Camera-verified reps</span>
-              <span>Earn your morning</span>
-            </div>
-          </div>
+        <a class="brand" href="#top">
+          <img src="assets/riserep-logo.png" alt="" style="width:30px;height:30px;" />
+          <span class="brand-mark">Rise<span class="accent">Reps</span></span>
+        </a>
+        <div class="footer-links">
+          <a href="support.html">Support</a>
+          <a href="privacy.html">Privacy</a>
+          <a href="privacy-choices.html">Privacy choices</a>
         </div>
+        <div>&copy; RiseReps. Earn your morning.</div>
       </div>
-    </section>
+    </footer>
   </main>
 
   <script>
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("is-visible");
-          }
+          if (entry.isIntersecting) entry.target.classList.add("is-visible");
         });
       },
-      { threshold: 0.18 }
+      { threshold: 0.15 }
     );
-
-    document.querySelectorAll(".reveal").forEach((element) => observer.observe(element));
+    document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
   </script>
 </body>
 </html>
