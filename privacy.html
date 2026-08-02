@@ -47,7 +47,7 @@
     </header>
 
     <h1>Privacy Policy</h1>
-    <p class="updated">Last updated: May 4, 2026</p>
+    <p class="updated">Last updated: August 2, 2026</p>
 
     <p>
       This Privacy Policy describes how the RiseReps mobile application ("RiseReps," "we," "us," or "our")
@@ -58,7 +58,9 @@
     <div class="callout">
       <strong>Short version:</strong> RiseReps is built to keep your data on your device. Camera frames used to
       count reps are processed locally and never recorded, uploaded, or transmitted. We don't sell your data,
-      we don't run ads, and we don't use third-party analytics or tracking SDKs.
+      we don't run ads or track you across apps. We use TelemetryDeck and PostHog for product analytics —
+      including anonymous wireframe replays of the app's own screens, with the camera preview and your
+      signature masked — and RevenueCat to validate and synchronize subscription status, as described below.
     </div>
 
     <h2>1. Information We Handle</h2>
@@ -73,7 +75,7 @@
 
     <h3>Information handled by Apple on your behalf</h3>
     <ul>
-      <li><strong>In-app purchases.</strong> Monthly and Lifetime Pro subscriptions are processed by Apple via StoreKit. We never see your payment details. Apple provides us a receipt that confirms your subscription status.</li>
+      <li><strong>In-app purchases.</strong> Monthly and annual Pro subscriptions are processed by Apple via StoreKit. We never see your payment details. RevenueCat receives an app-generated identifier and subscription transaction/status information so purchases can be validated and synchronized.</li>
       <li><strong>Accountability Partner pairing.</strong> If you choose to pair with a partner, pairing and partner status are synced through Apple's iCloud / CloudKit using your Apple ID. We do not operate our own servers for this. Only your iCloud-derived partner identifier and partner status (e.g., paired, completed) are exchanged — never camera footage.</li>
       <li><strong>Notifications.</strong> Alarm, workout reminder, weekly recap, and partner alerts are scheduled as local notifications on your device.</li>
     </ul>
@@ -82,9 +84,17 @@
     <ul>
       <li>We do not record, store, upload, or transmit any video, photo, or audio from your camera or microphone.</li>
       <li>We do not collect your precise location.</li>
-      <li>We do not use third-party advertising, analytics, or tracking SDKs.</li>
+      <li>We do not use third-party advertising SDKs and do not track you across other companies' apps or websites.</li>
       <li>We do not require an account, email, or password to use the app.</li>
       <li>We do not sell or rent your personal information to anyone.</li>
+    </ul>
+
+    <h3>Product analytics and subscription services</h3>
+    <ul>
+      <li><strong>TelemetryDeck.</strong> RiseReps sends product-usage events such as onboarding progress, alarm configuration, and workout completion, together with limited event parameters. We do not send camera frames, names, email addresses, precise location, or partner content.</li>
+      <li><strong>PostHog.</strong> RiseReps sends the same product-usage events to PostHog, so the two data sets can be compared. PostHog assigns each installation a randomly generated identifier that is not linked to your name, email address, or Apple Account.</li>
+      <li><strong>PostHog session replay.</strong> PostHog also captures anonymous replays of your activity inside the app. These are wireframes — an outline of the interface and where you tapped — not video or screenshots of your screen. Text and images are masked automatically, and the live camera preview and your commitment signature are masked explicitly, so neither is ever recorded. We use these replays only to find where the app is confusing or broken.</li>
+      <li><strong>RevenueCat.</strong> RiseReps uses RevenueCat to synchronize purchase and entitlement status. RevenueCat receives a randomly generated app user identifier, subscription transaction/status data, and SDK diagnostics.</li>
     </ul>
 
     <h2>2. Permissions We Request</h2>
