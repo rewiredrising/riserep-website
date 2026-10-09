@@ -71,3 +71,4 @@ When the calendar runs out: research 36 more with Applyra (if reachable) and Goo
 |---|---|---|---|
 | 2026-10-06 | 1 | alarm-clock-that-makes-you-get-out-of-bed | alarm clock that makes you get out of bed |
 | 2026-10-07 | 2 | how-to-stop-hitting-snooze | how to stop hitting snooze |
+| 2026-10-09 | 3 | alarm-that-makes-you-do-push-ups | alarm that makes you do push ups |
