@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<!-- i18n:source=0a11098307e8 -->
+<html lang="zh-Hans" dir="ltr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>隐私政策 — RiseReps</title>
+<meta name="description" content="RiseReps 隐私政策：我们收集哪些信息、如何使用这些信息，以及你可以做出的选择。" />
+<link rel="canonical" href="https://risereps.app/zh-Hans/privacy.html" />
+<link rel="icon" type="image/png" sizes="64x64" href="../assets/favicon-64.png" />
+<link rel="apple-touch-icon" href="../assets/apple-touch-icon.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --cream: #f5f0e8;
+    --cream-soft: #fbf8f1;
+    --ink: #1c1c1e;
+    --muted: #6f6a62;
+    --gold: #c4a94d;
+    --border: rgba(28, 28, 30, 0.08);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { background: var(--cream); color: var(--ink); font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 64px 28px 96px; }
+  header.brand { display: flex; align-items: center; gap: 12px; margin-bottom: 48px; }
+  header.brand img { width: 36px; height: 36px; border-radius: 8px; }
+  header.brand span { font-weight: 700; font-size: 18px; letter-spacing: -0.01em; }
+  h1 { font-size: 40px; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 12px; line-height: 1.1; }
+  .updated { color: var(--muted); font-size: 14px; margin-bottom: 40px; }
+  h2 { font-size: 22px; font-weight: 700; letter-spacing: -0.01em; margin-top: 36px; margin-bottom: 12px; }
+  h3 { font-size: 16px; font-weight: 700; margin-top: 20px; margin-bottom: 8px; }
+  p, li { font-size: 16px; line-height: 1.65; color: #2a2a2e; margin-bottom: 12px; }
+  ul, ol { padding-left: 22px; margin-bottom: 12px; }
+  strong { font-weight: 700; }
+  a { color: var(--ink); text-decoration: underline; text-decoration-color: var(--gold); text-underline-offset: 3px; }
+  hr { border: 0; border-top: 1px solid var(--border); margin: 40px 0; }
+  .callout { background: var(--cream-soft); border: 1px solid var(--border); border-radius: 16px; padding: 18px 20px; margin: 16px 0; }
+  footer { color: var(--muted); font-size: 13px; margin-top: 56px; border-top: 1px solid var(--border); padding-top: 24px; }
+</style>
+<!-- i18n:head -->
+<link rel="alternate" hreflang="en" href="https://risereps.app/privacy.html" />
+<link rel="alternate" hreflang="es" href="https://risereps.app/es/privacy.html" />
+<link rel="alternate" hreflang="pt-BR" href="https://risereps.app/pt-BR/privacy.html" />
+<link rel="alternate" hreflang="de" href="https://risereps.app/de/privacy.html" />
+<link rel="alternate" hreflang="zh-Hans" href="https://risereps.app/zh-Hans/privacy.html" />
+<link rel="alternate" hreflang="ja" href="https://risereps.app/ja/privacy.html" />
+<link rel="alternate" hreflang="ar" href="https://risereps.app/ar/privacy.html" />
+<link rel="alternate" hreflang="x-default" href="https://risereps.app/privacy.html" />
+<meta property="og:locale" content="zh_CN" />
+<meta property="og:locale:alternate" content="en_US" />
+<meta property="og:locale:alternate" content="es_ES" />
+<meta property="og:locale:alternate" content="pt_BR" />
+<meta property="og:locale:alternate" content="de_DE" />
+<meta property="og:locale:alternate" content="ja_JP" />
+<meta property="og:locale:alternate" content="ar_AR" />
+<link rel="stylesheet" href="/assets/i18n.css" />
+<!-- /i18n:head -->
+</head>
+<body>
+  <div class="wrap">
+    <header class="brand">
+      <img src="../assets/riserep-logo.webp" alt="RiseReps 标志" />
+      <span>RiseReps</span>
+    </header>
+
+    <h1>隐私政策</h1>
+    <p class="updated">本译文仅为方便阅读而提供。如有任何差异，以<a href="/privacy.html" hreflang="en">英文版本</a>为准。</p>
+    <p class="updated">最后更新：2026年10月11日</p>
+
+    <p>
+      本隐私政策说明 RiseReps 移动应用（“RiseReps”或“我们”）在你使用本应用时如何处理信息。
+      RiseReps 是一款“起床验证”闹钟，在关闭闹钟前，会通过设备端的相机处理来验证你完成的运动次数。
+    </p>
+
+    <div class="callout">
+      <strong>简而言之：</strong>RiseReps 的设计初衷是让大部分数据都保留在你的设备上。用于计数的相机画面仅在本地处理，
+      绝不会被录制、上传或传输。我们不出售你的数据，不投放广告，也不会跨应用追踪你。我们使用 TelemetryDeck 和 PostHog
+      进行产品分析（包括对应用自身界面的匿名线框回放，相机预览和你的签名均已遮蔽），使用 RevenueCat 验证订阅状态，
+      并使用 Apple CloudKit 提供可选的伙伴功能和公开排行榜，详见下文。
+    </div>
+
+    <h2>1. 我们处理的信息</h2>
+
+    <h3>完全在你的设备上处理的信息</h3>
+    <ul>
+      <li><strong>相机输入。</strong>在你完成动作期间，系统会使用 Apple 的 Vision 人体姿态框架实时分析相机画面。画面不会被存储、录制或发送到任何服务器。</li>
+      <li><strong>引导问卷回答与个人资料。</strong>你在设置过程中提供的目标、作息安排、健身水平及类似回答均存储在你的设备本地。</li>
+      <li><strong>闹钟、锻炼及进度记录。</strong>你设定的闹钟、选择的运动、完成的次数、连续打卡记录和统计数据均存储在本地。</li>
+      <li><strong>设置。</strong>铃声选择、通知偏好、伙伴提醒偏好以及 Screen Time（屏幕使用时间）配置均存储在本地。</li>
+    </ul>
+
+    <h3>由 Apple 代为处理的信息</h3>
+    <ul>
+      <li><strong>App 内购买。</strong>Pro 周订阅和年订阅由 Apple 通过 StoreKit 处理。我们绝不会看到你的支付信息。RevenueCat 会接收应用生成的标识符以及订阅交易/状态信息，以便验证和同步购买。</li>
+      <li><strong>监督伙伴配对。</strong>如果你选择与伙伴配对，配对信息和伙伴状态将使用你的 Apple ID 通过 Apple 的 iCloud / CloudKit 同步。我们不为此运营自己的服务器。双方仅交换源自 iCloud 的伙伴标识符和伙伴状态（例如“已配对”“已完成”），绝不交换相机画面。</li>
+      <li><strong>RiseReps Arena 排行榜。</strong>如果你已登录 iCloud，RiseReps 会将源自 iCloud 的用户标识符、系统分配的化名（例如“Riser 1234”）以及排行榜统计数据存储在 Apple 的公共 CloudKit 数据库中。统计数据可能包括经验证的动作总次数、XP、连续打卡记录、锻炼次数、运动类型以及起床时间或准时情况。其他 RiseReps 用户可以看到该化名及排名统计数据，但无法看到你的 Apple 账户名称或电子邮件地址。相机画面绝不会被上传。</li>
+      <li><strong>通知。</strong>闹钟、锻炼提醒、每周回顾和伙伴提醒均以本地通知的形式在你的设备上安排。</li>
+    </ul>
+
+    <h3>我们<em>不</em>收集的信息</h3>
+    <ul>
+      <li>我们不会录制、存储、上传或传输来自你的相机或麦克风的任何视频、照片或音频。</li>
+      <li>我们不收集你的精确位置。</li>
+      <li>我们不使用第三方广告 SDK，也不会在其他公司的应用或网站上追踪你。</li>
+      <li>使用本应用无需账户、电子邮件或密码。</li>
+      <li>我们不会向任何人出售或出租你的个人信息。</li>
+    </ul>
+
+    <h3>产品分析与订阅服务</h3>
+    <ul>
+      <li><strong>TelemetryDeck。</strong>RiseReps 会发送产品使用事件（例如引导进度、闹钟配置和锻炼完成情况）以及有限的事件参数。我们不会发送相机画面、姓名、电子邮件地址、精确位置或伙伴相关内容。</li>
+      <li><strong>PostHog。</strong>RiseReps 会将相同的产品使用事件发送至 PostHog，以便对比两组数据。PostHog 会为每次安装分配一个随机生成的标识符，该标识符不会与你的姓名、电子邮件地址或 Apple 账户关联。</li>
+      <li><strong>PostHog 会话回放。</strong>PostHog 还会捕获你在应用内操作的匿名回放。这些回放是线框图，即界面轮廓及你的点按位置，而非屏幕视频或截图。文字和图片会被自动遮蔽，实时相机预览和你的承诺签名也会被特别遮蔽，因此二者绝不会被记录。我们仅使用这些回放来发现应用中令人困惑或存在故障的地方。</li>
+      <li><strong>RevenueCat。</strong>RiseReps 使用 RevenueCat 同步购买和权益状态。RevenueCat 会接收随机生成的应用用户标识符、订阅交易/状态数据以及 SDK 诊断信息。</li>
+    </ul>
+
+    <h3>退款申请</h3>
+    <p>
+      使用我们的应用并进行 App 内购买，即表示你同意我们在处理退款申请时，与 Apple 共享你对所购内容的使用和消费信息。
+      这些信息可能包括你访问所购内容及与之互动的方式。我们仅在帮助 Apple 做出知情退款决定所需的范围内，
+      并依照 Apple 的政策共享这些信息。此类共享由 RevenueCat 代表我们进行。
+    </p>
+
+    <h2>2. 我们申请的权限</h2>
+    <ul>
+      <li><strong>相机</strong> — 用于计数，必需。仅在锻炼进行时使用，不保存任何画面。</li>
+      <li><strong>通知</strong> — 闹钟响铃以及提醒/伙伴提醒所必需。</li>
+      <li><strong>Screen Time（屏幕使用时间）/ 家长控制</strong>（可选）— 在本地使用，以支持锁定功能。活动数据依据 Apple 的框架保留在设备上。</li>
+    </ul>
+
+    <h2>3. 我们如何使用信息</h2>
+    <p>存储在你设备上的信息用于：</p>
+    <ul>
+      <li>安排和触发闹钟。</li>
+      <li>验证动作次数并关闭闹钟。</li>
+      <li>记录连续打卡、统计数据和进度。</li>
+      <li>根据你的引导问卷回答提供个性化体验。</li>
+      <li>通过 iCloud 同步伙伴状态（如你选择启用）。</li>
+      <li>通过 CloudKit 计算并发布以化名显示的 Arena 排名。</li>
+    </ul>
+
+    <h2>4. 数据保留与删除</h2>
+    <p>
+      你可以在“设置 &gt; 删除账户”中移除本地及与 iCloud 关联的 RiseReps 数据。此操作会移除闹钟、锻炼记录、伙伴数据和公开排行榜记录，
+      但不会取消 App Store 订阅。删除应用会移除本地数据，但可能不会移除公共 CloudKit 记录；因此，如需清除这些记录，请先使用应用内的删除功能。
+      订阅收据仍由 Apple 在你的 Apple ID 下管理。
+    </p>
+
+    <h2>5. 儿童隐私</h2>
+    <p>
+      RiseReps 并非面向 13 岁以下儿童，我们也不会在知情的情况下收集 13 岁以下儿童的信息。
+      如果你认为有儿童向我们提供了信息，请联系我们，以便我们进行处理。
+    </p>
+
+    <h2>6. 安全</h2>
+    <p>
+      本地数据受你设备的标准安全机制保护（密码、面容 ID、触控 ID 以及 iOS 沙盒机制）。伙伴数据使用私有/共享的 iCloud 存储。
+      Arena 排名使用公共 CloudKit 数据库，以便其他玩家查看排名化名及统计数据；在首个版本中，RiseReps 不允许使用个人自定义名称。
+      没有任何系统是绝对安全的，但我们通过限制离开设备的数据来尽可能降低风险。
+    </p>
+
+    <h2>7. 你的权利与选择</h2>
+    <ul>
+      <li><strong>访问/删除：</strong>使用“设置 &gt; 删除账户”移除本地数据、伙伴数据和公开排行榜记录。</li>
+      <li><strong>权限：</strong>你可随时在 iOS“设置”中撤销相机、通知和 Screen Time（屏幕使用时间）访问权限。</li>
+      <li><strong>订阅：</strong>在你的 Apple ID 订阅设置中管理或取消订阅。</li>
+      <li>
+        根据你所在地区，你可能还享有 GDPR 或 CCPA/CPRA 等法律规定的其他权利。
+        详情请参阅<a href="privacy-choices.html">用户隐私选择</a>。
+      </li>
+    </ul>
+
+    <h2>8. 国际用户</h2>
+    <p>
+      RiseReps 在美国运营。如果你在美国境外使用本应用，请知悉：任何通过 iCloud 同步的数据均由 Apple 依据其条款处理，
+      并可能在其他国家/地区进行处理。
+    </p>
+
+    <h2>9. 本政策的变更</h2>
+    <p>
+      我们可能会不时更新本政策。如有重大变更，我们将更新本页顶部的“最后更新”日期，并在适当情况下于应用内告知。
+    </p>
+
+    <h2>10. 联系我们</h2>
+    <p>
+      对本政策或你的数据有疑问？请发送电子邮件至
+      <a href="mailto:privacy@risereps.app">privacy@risereps.app</a>。
+    </p>
+
+    <footer>
+      © RiseReps。保留所有权利。
+      <!-- i18n:switcher --><details class="lang-switch"><summary aria-label="语言"><svg viewBox="0 0 24 24" aria-hidden="true" width="16" height="16"><path fill="none" stroke="currentColor" stroke-width="1.8" d="M12 3a9 9 0 1 0 0 18a9 9 0 1 0 0-18M3 12h18M12 3c2.5 2.7 3.8 5.7 3.8 9s-1.3 6.3-3.8 9M12 3c-2.5 2.7-3.8 5.7-3.8 9s1.3 6.3 3.8 9"/></svg><span>简体中文</span></summary><ul><li><a href="/privacy.html" hreflang="en" lang="en">English</a></li><li><a href="/es/privacy.html" hreflang="es" lang="es">Español</a></li><li><a href="/pt-BR/privacy.html" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a></li><li><a href="/de/privacy.html" hreflang="de" lang="de">Deutsch</a></li><li><a href="/zh-Hans/privacy.html" hreflang="zh-Hans" lang="zh-Hans" aria-current="true">简体中文</a></li><li><a href="/ja/privacy.html" hreflang="ja" lang="ja">日本語</a></li><li><a href="/ar/privacy.html" hreflang="ar" lang="ar">العربية</a></li></ul></details><!-- /i18n:switcher -->
+    </footer>
+  </div>
+</body>
+</html>

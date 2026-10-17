@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<!-- i18n:source=0a11098307e8 -->
+<html lang="es" dir="ltr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Política de privacidad — RiseReps</title>
+<meta name="description" content="Política de privacidad de RiseReps: qué datos recopilamos, cómo los usamos y qué opciones tienes." />
+<link rel="canonical" href="https://risereps.app/es/privacy.html" />
+<link rel="icon" type="image/png" sizes="64x64" href="../assets/favicon-64.png" />
+<link rel="apple-touch-icon" href="../assets/apple-touch-icon.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --cream: #f5f0e8;
+    --cream-soft: #fbf8f1;
+    --ink: #1c1c1e;
+    --muted: #6f6a62;
+    --gold: #c4a94d;
+    --border: rgba(28, 28, 30, 0.08);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { background: var(--cream); color: var(--ink); font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 64px 28px 96px; }
+  header.brand { display: flex; align-items: center; gap: 12px; margin-bottom: 48px; }
+  header.brand img { width: 36px; height: 36px; border-radius: 8px; }
+  header.brand span { font-weight: 700; font-size: 18px; letter-spacing: -0.01em; }
+  h1 { font-size: 40px; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 12px; line-height: 1.1; }
+  .updated { color: var(--muted); font-size: 14px; margin-bottom: 40px; }
+  h2 { font-size: 22px; font-weight: 700; letter-spacing: -0.01em; margin-top: 36px; margin-bottom: 12px; }
+  h3 { font-size: 16px; font-weight: 700; margin-top: 20px; margin-bottom: 8px; }
+  p, li { font-size: 16px; line-height: 1.65; color: #2a2a2e; margin-bottom: 12px; }
+  ul, ol { padding-left: 22px; margin-bottom: 12px; }
+  strong { font-weight: 700; }
+  a { color: var(--ink); text-decoration: underline; text-decoration-color: var(--gold); text-underline-offset: 3px; }
+  hr { border: 0; border-top: 1px solid var(--border); margin: 40px 0; }
+  .callout { background: var(--cream-soft); border: 1px solid var(--border); border-radius: 16px; padding: 18px 20px; margin: 16px 0; }
+  footer { color: var(--muted); font-size: 13px; margin-top: 56px; border-top: 1px solid var(--border); padding-top: 24px; }
+</style>
+<!-- i18n:head -->
+<link rel="alternate" hreflang="en" href="https://risereps.app/privacy.html" />
+<link rel="alternate" hreflang="es" href="https://risereps.app/es/privacy.html" />
+<link rel="alternate" hreflang="pt-BR" href="https://risereps.app/pt-BR/privacy.html" />
+<link rel="alternate" hreflang="de" href="https://risereps.app/de/privacy.html" />
+<link rel="alternate" hreflang="zh-Hans" href="https://risereps.app/zh-Hans/privacy.html" />
+<link rel="alternate" hreflang="ja" href="https://risereps.app/ja/privacy.html" />
+<link rel="alternate" hreflang="ar" href="https://risereps.app/ar/privacy.html" />
+<link rel="alternate" hreflang="x-default" href="https://risereps.app/privacy.html" />
+<meta property="og:locale" content="es_ES" />
+<meta property="og:locale:alternate" content="en_US" />
+<meta property="og:locale:alternate" content="pt_BR" />
+<meta property="og:locale:alternate" content="de_DE" />
+<meta property="og:locale:alternate" content="zh_CN" />
+<meta property="og:locale:alternate" content="ja_JP" />
+<meta property="og:locale:alternate" content="ar_AR" />
+<link rel="stylesheet" href="/assets/i18n.css" />
+<!-- /i18n:head -->
+</head>
+<body>
+  <div class="wrap">
+    <header class="brand">
+      <img src="../assets/riserep-logo.webp" alt="Logotipo de RiseReps" />
+      <span>RiseReps</span>
+    </header>
+
+    <h1>Política de privacidad</h1>
+    <p class="updated">Esta traducción se ofrece para tu comodidad. Si existe alguna diferencia, prevalece la <a href="/privacy.html" hreflang="en">versión en inglés</a>.</p>
+    <p class="updated">Última actualización: 11 de octubre de 2026</p>
+
+    <p>
+      Esta Política de privacidad describe cómo la aplicación móvil RiseReps («RiseReps», «nosotros» o «nuestro»)
+      trata la información cuando usas la app. RiseReps es una alarma con prueba de despertar que procesa la
+      cámara en el propio dispositivo para verificar las repeticiones de ejercicio antes de apagar tu alarma.
+    </p>
+
+    <div class="callout">
+      <strong>En resumen:</strong> RiseReps está diseñada para mantener la mayoría de los datos en tu dispositivo. Los fotogramas de la cámara
+      que se usan para contar repeticiones se procesan localmente y nunca se graban, suben ni transmiten. No vendemos tus datos,
+      no mostramos anuncios ni te rastreamos entre apps. Usamos TelemetryDeck y PostHog para analítica de producto
+      —incluidas reproducciones anónimas en esquema (wireframe) de las propias pantallas de la app, con la vista previa de la cámara y tu
+      firma ocultas—, RevenueCat para validar el estado de la suscripción y Apple CloudKit para las funciones opcionales de compañero
+      y las clasificaciones públicas, tal como se describe a continuación.
+    </div>
+
+    <h2>1. Información que tratamos</h2>
+
+    <h3>Información procesada íntegramente en tu dispositivo</h3>
+    <ul>
+      <li><strong>Imagen de la cámara.</strong> Mientras completas las repeticiones, la imagen de la cámara se analiza en tiempo real con el framework de detección de postura corporal Vision de Apple. Los fotogramas no se almacenan, graban ni envían a ningún servidor.</li>
+      <li><strong>Respuestas de configuración inicial y perfil.</strong> Los objetivos, el horario, el nivel de forma física y otras respuestas similares que proporcionas durante la configuración se almacenan localmente en tu dispositivo.</li>
+      <li><strong>Alarmas, entrenamientos e historial de progreso.</strong> Tus alarmas programadas, los ejercicios elegidos, las repeticiones completadas, las rachas y las estadísticas se almacenan localmente.</li>
+      <li><strong>Ajustes.</strong> Las preferencias de sonido, de notificaciones y de avisos al compañero, así como la configuración de Screen Time (Tiempo de uso), se almacenan localmente.</li>
+    </ul>
+
+    <h3>Información que Apple trata en tu nombre</h3>
+    <ul>
+      <li><strong>Compras dentro de la app.</strong> Las suscripciones Pro semanales y anuales las procesa Apple mediante StoreKit. Nunca vemos tus datos de pago. RevenueCat recibe un identificador generado por la app e información sobre las transacciones y el estado de la suscripción para poder validar y sincronizar las compras.</li>
+      <li><strong>Vinculación con un compañero de responsabilidad.</strong> Si decides vincularte con un compañero, la vinculación y el estado del compañero se sincronizan a través de iCloud / CloudKit de Apple usando tu Apple ID. No operamos servidores propios para ello. Solo se intercambian tu identificador de compañero derivado de iCloud y el estado del compañero (p. ej., vinculado, completado), nunca imágenes de la cámara.</li>
+      <li><strong>Clasificaciones de RiseReps Arena.</strong> Si has iniciado sesión en iCloud, RiseReps almacena un identificador de usuario derivado de iCloud, un seudónimo asignado como «Riser 1234» y estadísticas de clasificación en la base de datos pública de CloudKit de Apple. Las estadísticas pueden incluir el total de repeticiones verificadas, XP, rachas, número de entrenamientos, tipo de ejercicio y valores de hora de despertar o puntualidad. Otros usuarios de RiseReps pueden ver el seudónimo y las estadísticas clasificadas; no pueden ver el nombre ni el correo electrónico de tu cuenta de Apple. Los fotogramas de la cámara nunca se suben.</li>
+      <li><strong>Notificaciones.</strong> Las alarmas, los recordatorios de entrenamiento, el resumen semanal y los avisos del compañero se programan como notificaciones locales en tu dispositivo.</li>
+    </ul>
+
+    <h3>Información que <em>no</em> recopilamos</h3>
+    <ul>
+      <li>No grabamos, almacenamos, subimos ni transmitimos ningún vídeo, foto o audio de tu cámara o micrófono.</li>
+      <li>No recopilamos tu ubicación precisa.</li>
+      <li>No usamos SDK publicitarios de terceros ni te rastreamos en apps o sitios web de otras empresas.</li>
+      <li>No necesitas una cuenta, correo electrónico ni contraseña para usar la app.</li>
+      <li>No vendemos ni alquilamos tu información personal a nadie.</li>
+    </ul>
+
+    <h3>Analítica de producto y servicios de suscripción</h3>
+    <ul>
+      <li><strong>TelemetryDeck.</strong> RiseReps envía eventos de uso del producto, como el progreso de la configuración inicial, la configuración de alarmas y la finalización de entrenamientos, junto con parámetros de evento limitados. No enviamos fotogramas de la cámara, nombres, direcciones de correo electrónico, ubicación precisa ni contenido del compañero.</li>
+      <li><strong>PostHog.</strong> RiseReps envía los mismos eventos de uso del producto a PostHog para poder comparar ambos conjuntos de datos. PostHog asigna a cada instalación un identificador generado aleatoriamente que no está vinculado a tu nombre, dirección de correo electrónico ni cuenta de Apple.</li>
+      <li><strong>Reproducción de sesiones de PostHog.</strong> PostHog también captura reproducciones anónimas de tu actividad dentro de la app. Son esquemas (wireframes) —un contorno de la interfaz y de dónde tocaste—, no vídeos ni capturas de tu pantalla. Los textos y las imágenes se ocultan automáticamente, y la vista previa en directo de la cámara y tu firma de compromiso se ocultan de forma explícita, por lo que ninguna de las dos se graba nunca. Usamos estas reproducciones únicamente para detectar dónde la app resulta confusa o falla.</li>
+      <li><strong>RevenueCat.</strong> RiseReps usa RevenueCat para sincronizar el estado de las compras y los derechos de acceso. RevenueCat recibe un identificador de usuario de la app generado aleatoriamente, datos de transacciones y estado de la suscripción, y diagnósticos del SDK.</li>
+    </ul>
+
+    <h3>Solicitudes de reembolso</h3>
+    <p>
+      Al usar nuestra app y realizar compras dentro de ella, aceptas que compartamos con Apple información sobre tu uso y
+      consumo del contenido adquirido cuando se resuelvan solicitudes de reembolso. Esta información puede incluir cómo
+      accediste al contenido adquirido e interactuaste con él. Solo compartimos esta información en la medida necesaria para ayudar a Apple
+      a tomar una decisión fundamentada sobre el reembolso y de acuerdo con las políticas de Apple. RevenueCat gestiona este
+      intercambio en nuestro nombre.
+    </p>
+
+    <h2>2. Permisos que solicitamos</h2>
+    <ul>
+      <li><strong>Cámara</strong>: necesaria para contar las repeticiones. Solo se usa mientras hay un entrenamiento activo. No se guarda ningún fotograma.</li>
+      <li><strong>Notificaciones</strong>: necesarias para que suenen las alarmas y para los recordatorios / avisos del compañero.</li>
+      <li><strong>Screen Time (Tiempo de uso) / Family Controls (Controles parentales)</strong> (opcional): se usa localmente para las funciones de bloqueo. Los datos de actividad permanecen en el dispositivo bajo el framework de Apple.</li>
+    </ul>
+
+    <h2>3. Cómo usamos la información</h2>
+    <p>La información almacenada en tu dispositivo se usa para:</p>
+    <ul>
+      <li>Programar y activar alarmas.</li>
+      <li>Verificar repeticiones y apagar alarmas.</li>
+      <li>Hacer un seguimiento de rachas, estadísticas y progreso.</li>
+      <li>Personalizar la experiencia según tus respuestas de la configuración inicial.</li>
+      <li>Sincronizar el estado del compañero (si lo activas) a través de iCloud.</li>
+      <li>Calcular y publicar clasificaciones seudónimas de Arena a través de CloudKit.</li>
+    </ul>
+
+    <h2>4. Conservación y eliminación de datos</h2>
+    <p>
+      Puedes eliminar los datos de RiseReps locales y asociados a iCloud desde Ajustes &gt; Eliminar cuenta. Esto elimina
+      las alarmas, el historial de entrenamientos, los datos del compañero y los registros de las clasificaciones públicas; no cancela
+      una suscripción del App Store. Eliminar la app borra los datos locales, pero puede que no elimine los registros públicos de CloudKit,
+      así que usa primero la opción de eliminación dentro de la app si quieres que esos registros se borren. Los recibos de suscripción
+      siguen gestionados por Apple en tu Apple ID.
+    </p>
+
+    <h2>5. Privacidad de los menores</h2>
+    <p>
+      RiseReps no está dirigida a menores de 13 años y no recopilamos a sabiendas información de
+      menores de 13 años. Si crees que un menor nos ha proporcionado información, contacta con nosotros para que
+      podamos solucionarlo.
+    </p>
+
+    <h2>6. Seguridad</h2>
+    <p>
+      Los datos locales están protegidos por la seguridad estándar de tu dispositivo (código, Face ID, Touch ID y el aislamiento
+      de apps de iOS). Los datos del compañero usan almacenamiento privado/compartido de iCloud. Las clasificaciones de Arena usan una base de datos
+      pública de CloudKit para que otros jugadores puedan leer los seudónimos clasificados y las estadísticas; RiseReps no permite nombres personales
+      de formato libre en la primera versión. Ningún sistema es totalmente seguro, pero minimizamos el riesgo limitando
+      lo que sale del dispositivo.
+    </p>
+
+    <h2>7. Tus derechos y opciones</h2>
+    <ul>
+      <li><strong>Acceso / eliminación:</strong> usa Ajustes &gt; Eliminar cuenta para eliminar los datos locales, los datos del compañero y los registros de las clasificaciones públicas.</li>
+      <li><strong>Permisos:</strong> puedes revocar en cualquier momento el acceso a la cámara, las notificaciones y Screen Time (Tiempo de uso) en los Ajustes de iOS.</li>
+      <li><strong>Suscripciones:</strong> gestiónalas o cancélalas en los ajustes de suscripciones de tu Apple ID.</li>
+      <li>
+        Según dónde vivas, puedes tener derechos adicionales en virtud de leyes como el RGPD o la
+        CCPA/CPRA. Consulta <a href="privacy-choices.html">Opciones de privacidad del usuario</a> para más información.
+      </li>
+    </ul>
+
+    <h2>8. Usuarios internacionales</h2>
+    <p>
+      RiseReps se opera desde Estados Unidos. Si usas la app desde fuera de EE. UU., ten en cuenta
+      que los datos sincronizados con iCloud los trata Apple conforme a sus condiciones y pueden procesarse en
+      otros países.
+    </p>
+
+    <h2>9. Cambios en esta política</h2>
+    <p>
+      Podemos actualizar esta política periódicamente. Los cambios importantes se reflejarán actualizando la
+      fecha de «Última actualización» al principio de esta página y, cuando corresponda, dentro de la app.
+    </p>
+
+    <h2>10. Contacto</h2>
+    <p>
+      ¿Tienes preguntas sobre esta política o tus datos? Escribe a
+      <a href="mailto:privacy@risereps.app">privacy@risereps.app</a>.
+    </p>
+
+    <footer>
+      © RiseReps. Todos los derechos reservados.
+      <!-- i18n:switcher --><details class="lang-switch"><summary aria-label="Idioma"><svg viewBox="0 0 24 24" aria-hidden="true" width="16" height="16"><path fill="none" stroke="currentColor" stroke-width="1.8" d="M12 3a9 9 0 1 0 0 18a9 9 0 1 0 0-18M3 12h18M12 3c2.5 2.7 3.8 5.7 3.8 9s-1.3 6.3-3.8 9M12 3c-2.5 2.7-3.8 5.7-3.8 9s1.3 6.3 3.8 9"/></svg><span>Español</span></summary><ul><li><a href="/privacy.html" hreflang="en" lang="en">English</a></li><li><a href="/es/privacy.html" hreflang="es" lang="es" aria-current="true">Español</a></li><li><a href="/pt-BR/privacy.html" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a></li><li><a href="/de/privacy.html" hreflang="de" lang="de">Deutsch</a></li><li><a href="/zh-Hans/privacy.html" hreflang="zh-Hans" lang="zh-Hans">简体中文</a></li><li><a href="/ja/privacy.html" hreflang="ja" lang="ja">日本語</a></li><li><a href="/ar/privacy.html" hreflang="ar" lang="ar">العربية</a></li></ul></details><!-- /i18n:switcher -->
+    </footer>
+  </div>
+</body>
+</html>
