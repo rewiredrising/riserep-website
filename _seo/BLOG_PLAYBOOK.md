@@ -29,6 +29,8 @@ App Store URL (every CTA): https://apps.apple.com/us/app/risereps/id6765616023
 Research 36 more topics (Applyra if reachable, Google autocomplete, competitor blogs, Reddit threads) and append them to the calendar with the same columns before writing.
 
 ## Localization (translations of posts)
+> Model/cost rule for translation: do the translation in this session, or if you delegate it (Claude Code CLI, subagents) use `--model sonnet` at normal effort — never opus, never `--effort max`, no parallel reviewer subagents.
+
 The site is translated into the locales in `_i18n/config.json` (es, pt-BR, de, zh-Hans, ja, ar). Translated pages live at `/<code>/...`, e.g. `/de/blog/<slug>/`. See `_i18n/README.md`.
 
 After the English post is finished and validated (before committing):
