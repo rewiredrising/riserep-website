@@ -48,3 +48,12 @@ footer .lang-switch ul { top: auto; bottom: calc(100% + 6px); inset-inline-end: 
 [dir="rtl"] summary::after { float: left; }
 [dir="rtl"] .lang-switch > summary::after { float: none; }
 [dir="rtl"] img, [dir="rtl"] video, [dir="rtl"] .device { direction: ltr; }
+
+/* Blog (assets/blog.css) RTL */
+[dir="rtl"] .meta span + span::before { margin-right: 0; margin-left: 18px; }
+[dir="rtl"] .post-body ul, [dir="rtl"] .post-body ol { padding-left: 0; padding-right: 1.3em; }
+[dir="rtl"] .toc ol { padding-left: 0; padding-right: 1.2em; }
+[dir="rtl"] th, [dir="rtl"] td { text-align: right; }
+[dir="rtl"] .answer { border-left: 1px solid var(--line); border-right: 4px solid var(--gold); }
+:lang(zh-Hans) .post-head h1, :lang(ja) .post-head h1, :lang(ar) .post-head h1,
+:lang(zh-Hans) .blog-hero h1, :lang(ja) .blog-hero h1, :lang(ar) .blog-hero h1 { letter-spacing: 0; line-height: 1.25; }
