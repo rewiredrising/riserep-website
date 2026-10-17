@@ -74,4 +74,30 @@
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
+  <!-- I18N:START (managed by _i18n/i18n.py) -->
+  <url><loc>https://risereps.app/es/</loc></url>
+  <url><loc>https://risereps.app/pt-BR/</loc></url>
+  <url><loc>https://risereps.app/de/</loc></url>
+  <url><loc>https://risereps.app/zh-Hans/</loc></url>
+  <url><loc>https://risereps.app/ja/</loc></url>
+  <url><loc>https://risereps.app/ar/</loc></url>
+  <url><loc>https://risereps.app/es/support.html</loc></url>
+  <url><loc>https://risereps.app/pt-BR/support.html</loc></url>
+  <url><loc>https://risereps.app/de/support.html</loc></url>
+  <url><loc>https://risereps.app/zh-Hans/support.html</loc></url>
+  <url><loc>https://risereps.app/ja/support.html</loc></url>
+  <url><loc>https://risereps.app/ar/support.html</loc></url>
+  <url><loc>https://risereps.app/es/privacy.html</loc></url>
+  <url><loc>https://risereps.app/pt-BR/privacy.html</loc></url>
+  <url><loc>https://risereps.app/de/privacy.html</loc></url>
+  <url><loc>https://risereps.app/zh-Hans/privacy.html</loc></url>
+  <url><loc>https://risereps.app/ja/privacy.html</loc></url>
+  <url><loc>https://risereps.app/ar/privacy.html</loc></url>
+  <url><loc>https://risereps.app/es/privacy-choices.html</loc></url>
+  <url><loc>https://risereps.app/pt-BR/privacy-choices.html</loc></url>
+  <url><loc>https://risereps.app/de/privacy-choices.html</loc></url>
+  <url><loc>https://risereps.app/zh-Hans/privacy-choices.html</loc></url>
+  <url><loc>https://risereps.app/ja/privacy-choices.html</loc></url>
+  <url><loc>https://risereps.app/ar/privacy-choices.html</loc></url>
+  <!-- I18N:END -->
 </urlset>

@@ -1,0 +1,50 @@
+/* Language switcher (markup injected by _i18n/i18n.py) */
+details.lang-switch { background: none; border: 0; border-radius: 0; padding: 0; margin: 0; box-shadow: none; }
+details.lang-switch > summary { margin: 0; font-size: 0.9rem; font-weight: 600; }
+.lang-switch { position: relative; display: inline-block; font-size: 0.9rem; font-weight: 600; z-index: 120; }
+.lang-switch > summary {
+  list-style: none; cursor: pointer; display: inline-flex; align-items: center; gap: 6px;
+  padding: 7px 12px; border-radius: 999px; border: 1px solid var(--i18n-line, rgba(127,127,127,.35));
+  color: inherit; background: var(--i18n-bg, transparent); white-space: nowrap; user-select: none;
+}
+.lang-switch > summary::-webkit-details-marker { display: none; }
+.lang-switch > summary::after { content: ""; width: 6px; height: 6px; border-inline-end: 1.5px solid currentColor; border-block-end: 1.5px solid currentColor; transform: translateY(-2px) rotate(45deg); margin-inline-start: 2px; opacity: .7; }
+.lang-switch[open] > summary::after { transform: translateY(1px) rotate(225deg); }
+.lang-switch ul {
+  position: absolute; inset-inline-end: 0; top: calc(100% + 6px); margin: 0; padding: 6px; list-style: none;
+  min-width: 190px; border-radius: 14px; background: var(--i18n-menu-bg, #fff); color: var(--i18n-menu-fg, #111);
+  border: 1px solid var(--i18n-line, rgba(127,127,127,.25)); box-shadow: 0 18px 40px rgba(0,0,0,.18);
+}
+.lang-switch li { margin: 0; padding: 0; }
+.lang-switch li::before { display: none !important; }
+.lang-switch ul a { display: block; padding: 8px 12px; border-radius: 9px; color: inherit; text-decoration: none; text-align: start; }
+.lang-switch ul a:hover, .lang-switch ul a:focus-visible { background: rgba(127,127,127,.14); text-decoration: none; }
+.lang-switch ul a[aria-current] { font-weight: 800; }
+.lang-switch ul a[aria-current]::after { content: " ✓"; }
+/* RiseReps palette */
+.lang-switch { --i18n-line: var(--line, rgba(14,14,16,.14)); --i18n-menu-bg: #fffaf0; --i18n-menu-fg: var(--ink, #111); }
+.site-nav .lang-switch { margin-inline-start: auto; }
+footer .lang-switch { margin-top: 14px; display: block; width: max-content; }
+footer .lang-switch ul { top: auto; bottom: calc(100% + 6px); inset-inline-end: auto; inset-inline-start: 0; }
+
+/* Scripts not covered by the latin web fonts */
+:lang(zh-Hans) body { font-family: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Noto Sans SC", "Microsoft YaHei", sans-serif; }
+:lang(ja) body { font-family: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", "Yu Gothic", sans-serif; }
+:lang(ar) body { font-family: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Geeza Pro", "Noto Sans Arabic", "Segoe UI", Tahoma, sans-serif; }
+
+:lang(zh-Hans) .kicker, :lang(ja) .kicker, :lang(ar) .kicker,
+:lang(zh-Hans) .step-number, :lang(ja) .step-number, :lang(ar) .step-number,
+:lang(zh-Hans) .exercise-label span, :lang(ja) .exercise-label span, :lang(ar) .exercise-label span { letter-spacing: 0.04em; }
+:lang(zh-Hans) h1, :lang(ja) h1, :lang(ar) h1, :lang(zh-Hans) h2, :lang(ja) h2, :lang(ar) h2 { letter-spacing: 0; line-height: 1.25; }
+:lang(ar) .kicker, :lang(ar) .step-number, :lang(ar) .exercise-label span { font-family: "Geeza Pro", "Noto Sans Arabic", sans-serif; font-weight: 700; letter-spacing: 0; }
+
+/* ---------- RTL (Arabic). Logos, phone mockups, screenshots and videos are not mirrored. ---------- */
+[dir="rtl"] .store-badge .badge-text { text-align: right; }
+[dir="rtl"] .feature-bullets li { padding-left: 0; padding-right: 30px; }
+[dir="rtl"] .feature-bullets li::before { left: auto; right: 0; }
+[dir="rtl"] ul, [dir="rtl"] ol { padding-left: 0; padding-right: 22px; }
+[dir="rtl"] .feature-bullets, [dir="rtl"] .lang-switch ul { padding-right: 0; }
+[dir="rtl"] .lang-switch ul { padding: 6px; }
+[dir="rtl"] summary::after { float: left; }
+[dir="rtl"] .lang-switch > summary::after { float: none; }
+[dir="rtl"] img, [dir="rtl"] video, [dir="rtl"] .device { direction: ltr; }

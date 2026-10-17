@@ -27,3 +27,7 @@ App Store URL (every CTA): https://apps.apple.com/us/app/risereps/id6765616023
 ## When the calendar runs out
 
 Research 36 more topics (Applyra if reachable, Google autocomplete, competitor blogs, Reddit threads) and append them to the calendar with the same columns before writing.
+
+## Localization note
+Core pages have translations under `/es/ /pt-BR/ /de/ /zh-Hans/ /ja/ /ar/` (see `_i18n/README.md`). Blog posts stay English.
+When editing `sitemap.xml`, only touch the `BLOG:START` block and the `/` + `/blog/` lastmod — never edit or remove the `I18N:START … I18N:END` block.
