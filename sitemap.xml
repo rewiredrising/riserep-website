@@ -14,6 +14,12 @@
   </url>
   <!-- BLOG:START (newest first; the blog task inserts new posts here) -->
   <url>
+    <loc>https://risereps.app/blog/revenge-bedtime-procrastination/</loc>
+    <lastmod>2026-10-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://risereps.app/blog/how-to-be-a-morning-person/</loc>
     <lastmod>2026-10-30</lastmod>
     <changefreq>monthly</changefreq>
@@ -69,7 +75,7 @@
   </url>
   <url>
     <loc>https://risereps.app/blog/how-to-stop-hitting-snooze/</loc>
-    <lastmod>2026-10-20</lastmod>
+    <lastmod>2026-10-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
