@@ -20,7 +20,7 @@ Not published (Jekyll skips `_` folders). Source of truth for the 3x/week blog t
 - At least 2 App Store CTAs (mid-article card + final CTA) linking to `https://apps.apple.com/us/app/risereps/id6765616023`.
 - Link to 2+ existing posts and the homepage. Cite real sources (link out) for any stat; never invent numbers.
 - Honest about competitors and research (e.g. 2023 Sundelin study found snoozing isn't necessarily harmful).
-- Product facts only from the homepage/support page: push-ups, squats, jumping jacks; on-device pose detection, nothing uploaded; no snooze; Persistent mode (re-fires every 60s); Full Lockdown (blocks apps via Screen Time); weekly rep progression; streaks + stats; accountability partner (one nudge/day); free download + free trial. No prices.
+- Product facts only from the homepage/support page: push-ups, squats, jumping jacks; on-device pose detection, nothing uploaded; no snooze; Persistent mode (re-fires every 60s); Full Lockdown (blocks apps via Screen Time); weekly rep progression; streaks + stats; accountability partner (one nudge/day); free to download, and the alarm workouts need RiseReps Pro, a single annual subscription (no free trial, no weekly or monthly plan, so never mention a trial). No prices.
 
 ## Calendar (Mon / Wed / Fri). Work top to bottom; skip anything already in the Published log.
 

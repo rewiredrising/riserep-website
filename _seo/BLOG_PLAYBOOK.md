@@ -16,6 +16,7 @@ App Store URL (every CTA): https://apps.apple.com/us/app/risereps/id6765616023
    - Internal links: homepage + at least 2 earlier posts (once they exist). Also add a link to the new post from 1–2 relevant older posts where it fits naturally.
    - Related section: 3 cards, preferring real earlier posts over homepage sections.
    - Product facts only from `index.html` / `support.html`. No prices.
+   - Pricing wording (since 2026-10-31): RiseReps is free to download, and the alarm workouts need RiseReps Pro, a single annual subscription. There is no free trial and no weekly or monthly plan, so never write "free trial", "try it free" or "test it before deciding". Say "free to download, with a single annual subscription". The final CTA note reads `Free to download · Annual subscription · iPhone` (translated pages: the same three items in that locale's words).
    - Voice: direct, warm, a bit punchy. Short paragraphs. Minimal em dashes. No filler intros.
 5. Add a card for the post at the top of the `POSTS:START` block in `blog/index.html` (kicker `Category · Mon D, YYYY`).
 6. Add the URL at the top of the `BLOG:START` block in `sitemap.xml`; update `lastmod` for `/` and `/blog/`.
